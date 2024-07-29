@@ -64,4 +64,31 @@
       margin-top: 25px;
     }
   }
+  &__slider-pagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    right: 0;
+    left: 0;
+    bottom: 20px;
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      border-radius: 50%;
+      display: block;
+      width: 12px;
+      height: 12px;
+      border: 1px solid white;
+      &.swiper-pagination-bullet-active {
+        background-color: white;
+      }
+    }
+    @include mobile {
+      bottom: 15px;
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }

@@ -14,7 +14,11 @@ export default function sliders() {
       slidesPerView: 1,
       effect: "fade",
       fadeEffect: { crossFade: true },
-      simulateTouch: false
+      simulateTouch: false,
+      pagination: {
+        el: ".hero__slider-pagination",
+        clickable: true
+      }
     });
   }
 }
