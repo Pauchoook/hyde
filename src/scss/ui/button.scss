@@ -7,3 +7,42 @@
   padding: 0;
   color: inherit;
 }
+
+.btn-primary {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 104%;
+  text-transform: uppercase;
+  color: var(--mine-shaft);
+  text-align: center;
+
+  border-radius: 54px;
+  max-width: 490px;
+  width: 100%;
+  padding: 22px;
+  background-color: var(--wheat);
+  border: 1px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+  @include hover {
+    color: #fff;
+  }
+  &:focus {
+    border-color: var(--mine-shaft);
+    color: var(--mine-shaft);
+  }
+  @include laptop {
+    max-width: 360px;
+    font-size: 32px;
+  }
+  @include tablet {
+    max-width: 250px;
+    padding: 8px;
+    font-size: 18px;
+  }
+  @include mobile {
+    max-width: 205px;
+  }
+}

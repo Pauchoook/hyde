@@ -161,6 +161,9 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    @include mobile {
+      gap: 10px;
+    }
   }
   &__nav-profile-btn {
     display: block;
