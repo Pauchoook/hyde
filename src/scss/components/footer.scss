@@ -135,8 +135,8 @@
   &__nav {
     display: flex;
     gap: 165px;
-    @include laptop {
-      gap: 110px;
+    @media (max-width: 1710px) {
+      gap: 100px;
     }
     @include laptop-min {
       gap: 15px;

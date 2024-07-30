@@ -1299,6 +1299,11 @@ body {
     width: 380px
   }
 }
+@media (max-width:1710px) {
+  .footer__nav {
+    gap: 100px
+  }
+}
 @media (max-width:1539px) {
   .header__logo {
     margin-right: 40px
@@ -1442,9 +1447,6 @@ body {
   }
   .footer__view {
     font-size: 24px
-  }
-  .footer__nav {
-    gap: 110px
   }
 }
 @media (max-width:1139px) {
