@@ -1,0 +1,88 @@
+.our-products {
+  padding-bottom: 140px;
+  @include laptop {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 70px;
+  }
+  &__wrapper {
+    margin-top: 80px;
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 60px;
+    @include laptop {
+      row-gap: 30px;
+    }
+    @include tablet {
+      row-gap: 20px;
+    }
+  }
+  &__item {
+    flex: 0 1 calc(100% - 540px);
+    height: 400px;
+    &:nth-child(2) {
+      flex-basis: 490px;
+    }
+    &:nth-child(3) {
+      flex-basis: 490px;
+    }
+    &:nth-child(5) {
+      flex-basis: 100%;
+    }
+    @include laptop {
+      height: 250px;
+      &:not(:last-child) {
+        flex-basis: calc(50% - 15px) !important;
+      }
+    }
+    @include tablet {
+      height: 215px;
+      &:not(:nth-child(3)) {
+        flex-basis: calc(50% - 10px) !important;
+      }
+      &:nth-child(3) {
+        flex-basis: 100% !important;
+        height: 130px;
+      }
+    }
+  }
+  &__card {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 1;
+    color: white;
+  }
+  &__item-title {
+    position: absolute;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 140%;
+    text-transform: uppercase;
+    left: 20px;
+    bottom: 20px;
+    @include laptop {
+      font-size: 32px;
+    }
+    @include laptop-min {
+      font-size: 26px;
+    }
+    @include tablet {
+      font-size: 22px;
+      left: 15px;
+      bottom: 15px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
