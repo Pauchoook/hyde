@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Pagination, Autoplay, EffectFade, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -15,6 +15,7 @@ export default function sliders() {
       effect: "fade",
       fadeEffect: { crossFade: true },
       simulateTouch: false,
+      grabCursor: true,
       pagination: {
         el: ".hero__slider-pagination",
         clickable: true
@@ -30,6 +31,7 @@ export default function sliders() {
       autoplay: true,
       slidesPerView: "auto",
       spaceBetween: 20,
+      grabCursor: true,
       breakpoints: {
         768: {
           slidesPerView: 3,
@@ -47,6 +49,7 @@ export default function sliders() {
       autoplay: true,
       slidesPerView: "auto",
       spaceBetween: 20,
+      grabCursor: true,
       breakpoints: {
         1540: {
           slidesPerView: 4,
@@ -63,6 +66,50 @@ export default function sliders() {
         768: {
           slidesPerView: 3,
           spaceBetween: 20
+        }
+      }
+    });
+  }
+
+  const reviewsSlider = document.querySelector(".reviews__slider");
+  if (reviewsSlider) {
+    const swiper = new Swiper(reviewsSlider, {
+      speed: 700,
+      modules: [Autoplay, Pagination, Navigation],
+      autoplay: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      pagination: {
+        el: ".reviews__slider-pagination",
+        clickable: true
+      },
+      navigation: {
+        prevEl: ".reviews__slider-nav .btn-slider--prev",
+        nextEl: ".reviews__slider-nav .btn-slider--next",
+      },
+      breakpoints: {
+        1540: {
+          slidesPerView: 4,
+          spaceBetween: 75
+        },
+        1365: {
+          slidesPerView: 3,
+          spaceBetween: 50
+        },
+        993: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        }
+      },
+      on: {
+        init: () => {
+          const pagesSlider = document.querySelectorAll(".reviews__slider-pagination .swiper-pagination-bullet");
+          pagesSlider.forEach((p, number) => p.textContent = number + 1)
         }
       }
     });

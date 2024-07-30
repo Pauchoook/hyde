@@ -1,0 +1,19 @@
+.btn-slider {
+  width: 75px;
+  height: 20px;
+  transition: color .2s ease, visibility .2s ease, opacity .2s ease;
+  &.swiper-button-disabled {
+    visibility: hidden;
+    opacity: 0;
+  }
+  @include hover {
+    color: var(--hoki);
+  }
+  &--prev {
+    transform: rotate(180deg);
+  }
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}

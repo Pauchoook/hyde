@@ -15,6 +15,8 @@
 
 // mini-components
 @import "./mini-components/check-all";
+@import "./mini-components/rating";
+@import "./mini-components/btn-slider";
 
 // components
 @import "./components/header";
@@ -25,5 +27,6 @@
 @import "./components/our-products";
 @import "./components/discount";
 @import "./components/new-products";
+@import "./components/reviews";
 
 @import "./components/footer";
