@@ -177,7 +177,8 @@ template {
 :root {
   --mine-shaft: #2C2C2C;
   --wheat: #F7D9B2;
-  --hoki: #5F7C9C
+  --hoki: #5F7C9C;
+  --error: #fe0202
 }
 html {
   box-sizing: border-box
@@ -186,6 +187,9 @@ html {
 *::after,
 *::before {
   box-sizing: inherit
+}
+*:not([input]) {
+  caret-color: transparent
 }
 a {
   color: inherit;
@@ -261,6 +265,61 @@ body {
   font-size: 70px;
   line-height: 140%;
   text-transform: uppercase
+}
+.input {
+  position: relative;
+  color: inherit;
+  outline: 0;
+  border-radius: 0;
+  background-color: rgba(0,0,0,0);
+  font-size: 16px;
+  letter-spacing: -.05em;
+  color: #fff;
+  padding: 15px 25px;
+  border: 1px solid #fff;
+  border-radius: 38px;
+  z-index: 1
+}
+.input::-webkit-input-placeholder {
+  color: inherit;
+  font-size: inherit;
+  opacity: .7
+}
+.input:-ms-input-placeholder {
+  color: inherit;
+  font-size: inherit;
+  opacity: .7
+}
+.input::-ms-input-placeholder {
+  color: inherit;
+  font-size: inherit;
+  opacity: .7
+}
+.input::placeholder {
+  color: inherit;
+  font-size: inherit;
+  opacity: .7
+}
+.input.error {
+  border-color: var(--error);
+  color: var(--error)
+}
+.input--number::-webkit-inner-spin-button,
+.input--number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+.form-btn {
+  font-size: 16px;
+  padding: 12px
+}
+.input-error {
+  display: block;
+  margin-top: 7px;
+  font-size: 16px;
+  letter-spacing: -.05em;
+  color: var(--error);
+  padding-left: 26px
 }
 .header {
   position: fixed;
@@ -586,6 +645,46 @@ body {
   left: 20px;
   bottom: 20px
 }
+.discount {
+  position: relative;
+  border-radius: 40px;
+  background: linear-gradient(137deg,#506c85 0,#95c0cc 100%);
+  padding: 55px 0 70px 0;
+  color: #fff;
+  z-index: 1
+}
+.discount__el {
+  position: absolute;
+  z-index: -1;
+  width: 695px;
+  height: auto;
+  top: 0;
+  right: 200px
+}
+.discount__wrapper {
+  padding-left: 85px
+}
+.discount__title {
+  max-width: 690px
+}
+.discount__form {
+  display: flex;
+  width: 100%;
+  margin-top: 25px
+}
+.discount__label:first-child {
+  max-width: 165px
+}
+.discount__label:nth-child(2) {
+  max-width: 325px
+}
+.discount__input {
+  width: 100%
+}
+.discount__btn {
+  max-width: none;
+  max-width: 240px
+}
 @font-face {
   font-family: swiper-icons;
   src: url("data:application/font-woff;charset=utf-8;base64, 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");
@@ -847,6 +946,9 @@ body {
   .advantages__item {
     max-width: 315px
   }
+  .discount__el {
+    right: 0
+  }
 }
 @media (max-width:1365px) {
   .btn-primary {
@@ -928,6 +1030,16 @@ body {
   }
   .our-products__item-title {
     font-size: 32px
+  }
+  .discount {
+    padding: 85px 0 115px 0
+  }
+  .discount__el {
+    max-width: none;
+    width: 545px
+  }
+  .discount__wrapper {
+    padding-left: 0
   }
 }
 @media (max-width:992px) {
@@ -1024,6 +1136,17 @@ body {
   .title-2 {
     font-size: 26px
   }
+  .input {
+    font-size: 12px;
+    padding: 10px
+  }
+  .form-btn {
+    padding: 9px
+  }
+  .input-error {
+    font-size: 14px;
+    padding-left: 11px
+  }
   .hero__info {
     height: 515px
   }
@@ -1090,6 +1213,23 @@ body {
     left: 15px;
     bottom: 15px
   }
+  .discount {
+    overflow: hidden
+  }
+  .discount__el {
+    width: 675px;
+    right: -335px
+  }
+  .discount__form {
+    flex-direction: column;
+    row-gap: 12px
+  }
+  .discount__label {
+    max-width: 300px!important
+  }
+  .discount__btn {
+    max-width: 300px!important
+  }
 }
 @media (max-width:479px) {
   .btn-primary {
@@ -1132,6 +1272,15 @@ body {
   }
   .our-products__item-title {
     font-size: 16px
+  }
+  .discount__title {
+    max-width: 260px
+  }
+  .discount__label {
+    max-width: 250px!important
+  }
+  .discount__btn {
+    max-width: 250px!important
   }
 }
 @media (any-hover:hover) {
