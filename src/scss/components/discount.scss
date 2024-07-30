@@ -69,7 +69,6 @@
     width: 100%;
   }
   &__btn {
-    max-width: none;
     max-width: 240px !important;
     @include tablet {
       max-width: 300px !important;

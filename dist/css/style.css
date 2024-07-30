@@ -682,7 +682,6 @@ body {
   width: 100%
 }
 .discount__btn {
-  max-width: none;
   max-width: 240px!important
 }
 @font-face {
