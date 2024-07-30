@@ -6,6 +6,7 @@ import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 import inputmask from "./files/inputmask.js";
 import filters from "./files/filters.js";
+import tab from "./files/tab.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -15,3 +16,4 @@ spoller();
 sliders();
 inputmask();
 filters();
+tab();

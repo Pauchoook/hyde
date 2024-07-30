@@ -328,6 +328,12 @@ body {
   color: var(--error);
   padding-left: 26px
 }
+.tab {
+  display: none
+}
+.tab.active {
+  display: block
+}
 .check-all {
   font-family: OpenSansCondensed,sans-serif;
   display: flex;
@@ -1109,6 +1115,96 @@ body {
   width: 100%;
   height: 100%;
   color: inherit
+}
+.auth {
+  min-height: 100vh
+}
+.auth__wrapper {
+  display: flex;
+  height: 100%;
+  min-height: 100vh
+}
+.auth__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 20px
+}
+.auth__img {
+  width: 390px;
+  height: 100%;
+  max-height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.auth__title {
+  font-size: 36px;
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-bottom: 60px
+}
+.auth__info {
+  max-width: 350px;
+  flex: 1
+}
+.auth__buttons-tab {
+  display: flex;
+  width: 100%
+}
+.auth__btn-tab {
+  position: relative;
+  flex: 0 1 50%;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 6px
+}
+.auth__btn-tab::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: currentColor;
+  opacity: .3;
+  transition: opacity .2s ease
+}
+.auth__btn-tab.active::before {
+  opacity: 1
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  max-width: 300px;
+  margin-top: 30px;
+  margin-bottom: 20px
+}
+.auth__input {
+  color: var(--mine-shaft);
+  border-color: var(--mine-shaft);
+  width: 100%
+}
+.auth__btn {
+  width: 100%;
+  max-width: none!important
+}
+.auth__help {
+  margin: 0;
+  display: block;
+  font-size: 16px;
+  line-height: 150%;
+  transition: color .2s ease
+}
+.auth__reg {
+  padding-top: 8px;
+  border-top: 1px solid var(--mine-shaft);
+  width: 100%
+}
+.auth__reg-btn {
+  font-size: 16px;
+  line-height: 150%;
+  transition: color .2s ease
 }
 .footer {
   position: relative;
@@ -2038,6 +2134,23 @@ body {
   .shop__nav-item {
     font-size: 14px
   }
+  .auth__container {
+    align-items: center;
+    justify-content: center
+  }
+  .auth__img {
+    display: none
+  }
+  .auth__info {
+    width: 100%
+  }
+  .auth__btn-tab {
+    font-size: 14px;
+    padding: 12px
+  }
+  .auth__help {
+    font-size: 14px
+  }
   .footer {
     padding: 30px 0 20px 0
   }
@@ -2276,6 +2389,15 @@ body {
     opacity: 1
   }
   .shop__nav-btn:hover {
+    color: var(--hoki)
+  }
+  .auth__btn-tab:hover::before {
+    opacity: 1
+  }
+  .auth__help:hover {
+    color: var(--hoki)
+  }
+  .auth__reg-btn:hover {
     color: var(--hoki)
   }
   .footer__contacts-item:hover {

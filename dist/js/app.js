@@ -4076,18 +4076,20 @@
             const burgerOpen = document.querySelector("#burger-open");
             const burgerClose = document.querySelector("#burger-close");
             const burgerOverlay = document.querySelector("#burger-overlay");
-            burgerOpen.addEventListener("click", (() => {
-                burger.classList.add("open");
-                document.body.classList.add("body-hidden");
-                burgerOverlay.classList.add("active");
-                burgerOverlay.addEventListener("click", handleClose);
-            }));
-            burgerClose.addEventListener("click", handleClose);
-            function handleClose() {
-                burger.classList.remove("open");
-                document.body.classList.remove("body-hidden");
-                burgerOverlay.classList.remove("active");
-                return burgerOverlay.removeEventListener("click", handleClose);
+            if (burger) {
+                burgerOpen.addEventListener("click", (() => {
+                    burger.classList.add("open");
+                    document.body.classList.add("body-hidden");
+                    burgerOverlay.classList.add("active");
+                    burgerOverlay.addEventListener("click", handleClose);
+                }));
+                burgerClose.addEventListener("click", handleClose);
+                function handleClose() {
+                    burger.classList.remove("open");
+                    document.body.classList.remove("body-hidden");
+                    burgerOverlay.classList.remove("active");
+                    return burgerOverlay.removeEventListener("click", handleClose);
+                }
             }
         }
         function ssr_window_esm_isObject(obj) {
@@ -8056,19 +8058,35 @@
             const btnClose = document.querySelector(".shop__sidebar-close");
             const sidebar = document.querySelector(".shop__sidebar");
             const sidebarOverlay = document.querySelector(".shop__sidebar-overlay");
-            btnOpen.addEventListener("click", (() => {
-                sidebar.classList.add("open");
-                document.body.classList.add("body-hidden");
-                sidebarOverlay.classList.add("active");
-                sidebarOverlay.addEventListener("click", handleClose);
-            }));
-            btnClose.addEventListener("click", handleClose);
-            function handleClose() {
-                sidebar.classList.remove("open");
-                document.body.classList.remove("body-hidden");
-                sidebarOverlay.classList.remove("active");
-                return sidebarOverlay.removeEventListener("click", handleClose);
+            if (sidebar) {
+                btnOpen.addEventListener("click", (() => {
+                    sidebar.classList.add("open");
+                    document.body.classList.add("body-hidden");
+                    sidebarOverlay.classList.add("active");
+                    sidebarOverlay.addEventListener("click", handleClose);
+                }));
+                btnClose.addEventListener("click", handleClose);
+                function handleClose() {
+                    sidebar.classList.remove("open");
+                    document.body.classList.remove("body-hidden");
+                    sidebarOverlay.classList.remove("active");
+                    return sidebarOverlay.removeEventListener("click", handleClose);
+                }
             }
+        }
+        function tab() {
+            const btnTabs = document.querySelectorAll(".tab-btn");
+            const tabs = document.querySelectorAll(".tab");
+            if (tabs.length) btnTabs.forEach((btn => {
+                btn.addEventListener("click", (() => {
+                    const {tab: tabId} = btn.dataset;
+                    const currentTab = document.querySelector(`.tab[data-tab=${tabId}]`);
+                    btnTabs.forEach((b => b.classList.remove("active")));
+                    tabs.forEach((t => t.classList.remove("active")));
+                    btn.classList.add("active");
+                    currentTab.classList.add("active");
+                }));
+            }));
         }
         isWebp();
         mediaAdaptive();
@@ -8077,5 +8095,6 @@
         sliders();
         inputmask_inputmask();
         filters();
+        tab();
     })();
 })();
