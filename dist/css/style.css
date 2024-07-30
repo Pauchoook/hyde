@@ -249,13 +249,25 @@ body {
 }
 .title {
   font-family: OpenSansCondensed,sans-serif;
-  margin: 0
+  margin: 0;
+  font-weight: 700
 }
 .title-1 {
-  font-weight: 700;
   font-size: 92px;
   line-height: 104%;
   text-transform: uppercase
+}
+.title-2 {
+  font-size: 70px;
+  line-height: 140%;
+  text-transform: uppercase
+}
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff
 }
 .header__container {
   display: flex;
@@ -466,6 +478,71 @@ body {
   margin: 5px 0 0 0;
   font-size: 16px;
   letter-spacing: -.05em
+}
+.top-sales {
+  padding-bottom: 70px
+}
+.top-sales__container {
+  padding: 0
+}
+.top-sales__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px
+}
+.top-sales__check-all {
+  font-family: OpenSansCondensed,sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+  transition: color .2s ease
+}
+.top-sales__arrow {
+  width: 75px;
+  height: 15px
+}
+.top-sales__slider {
+  max-width: 1500px;
+  margin-left: 0!important;
+  margin-top: 80px
+}
+.top-sales__item-img {
+  border-radius: 21px;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.top-sales__item-type {
+  display: block;
+  font-size: 16px;
+  letter-spacing: -.05em
+}
+.top-sales__item-title {
+  margin-top: 5px;
+  font-size: 22px;
+  line-height: 140%
+}
+.top-sales__price-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px
+}
+.top-sales__item-price {
+  display: block;
+  margin-top: 8px;
+  line-height: 140%
+}
+.top-sales__item-price-btn {
+  display: none;
+  max-width: 150px
 }
 @font-face {
   font-family: swiper-icons;
@@ -786,10 +863,22 @@ body {
   .advantages__title {
     font-size: 18px
   }
+  .top-sales__container {
+    padding: 0 20px
+  }
+  .top-sales__header {
+    padding: 0
+  }
+  .top-sales__item-img {
+    height: 430px
+  }
 }
 @media (max-width:992px) {
   .title-1 {
     font-size: 54px
+  }
+  .title-2 {
+    font-size: 50px
   }
   .header__container {
     justify-content: space-between
@@ -852,6 +941,16 @@ body {
   .advantages__content {
     font-size: 14px
   }
+  .top-sales__check-all {
+    font-size: 18px;
+    gap: 20px
+  }
+  .top-sales__arrow {
+    width: 45px
+  }
+  .top-sales__item-title {
+    font-size: 18px
+  }
 }
 @media (max-width:767px) {
   .btn-primary {
@@ -860,6 +959,9 @@ body {
     font-size: 18px
   }
   .title-1 {
+    font-size: 26px
+  }
+  .title-2 {
     font-size: 26px
   }
   .hero__info {
@@ -873,6 +975,36 @@ body {
   }
   .advantages {
     padding: 70px 0
+  }
+  .top-sales__check-all {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    font-size: 16px;
+    gap: 10px
+  }
+  .top-sales__arrow {
+    width: 30px
+  }
+  .top-sales__slider {
+    margin-top: 30px
+  }
+  .top-sales__item {
+    width: 245px!important
+  }
+  .top-sales__item-img {
+    margin-bottom: 10px;
+    height: 270px
+  }
+  .top-sales__item-type {
+    font-size: 14px
+  }
+  .top-sales__item-title {
+    font-size: 16px
+  }
+  .top-sales__item-price-btn {
+    display: block
   }
 }
 @media (max-width:479px) {
@@ -907,6 +1039,13 @@ body {
   .advantages__content {
     font-size: 12px
   }
+  .top-sales__item-price {
+    font-family: OpenSansCondensed,sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    text-transform: uppercase
+  }
 }
 @media (any-hover:hover) {
   .btn-primary:hover {
@@ -921,5 +1060,8 @@ body {
   .header__nav-profile-btn:hover {
     color: transparent;
     border-color: var(--mine-shaft)
+  }
+  .top-sales__check-all:hover {
+    color: var(--hoki)
   }
 }

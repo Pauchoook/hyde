@@ -21,4 +21,21 @@ export default function sliders() {
       }
     });
   }
+
+  const topSalesSlider = document.querySelector(".top-sales__slider");
+  if (topSalesSlider) {
+    const swiper = new Swiper(topSalesSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      // autoplay: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 0
+        }
+      }
+    });
+  }
 }

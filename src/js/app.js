@@ -6,6 +6,7 @@ import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 
 functions.isWebp();
+functions.mediaAdaptive();
 
 burger();
 spoller();
