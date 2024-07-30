@@ -112,7 +112,7 @@
   }
   &__item-price-btn {
     display: none;
-    max-width: 150px;
+    max-width: 150px !important;
     @include tablet {
       display: block;
     }
