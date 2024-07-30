@@ -44,12 +44,12 @@
 .input-error {
   display: block;
   margin-top: 7px;
-  font-size: 16px;
+  font-size: 16px !important;
   letter-spacing: -0.05em;
   color: var(--error);
   padding-left: 26px;
   @include tablet {
-    font-size: 14px;
+    font-size: 14px !important;
     padding-left: 11px;
   }
 }

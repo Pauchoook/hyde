@@ -316,7 +316,7 @@ body {
 .input-error {
   display: block;
   margin-top: 7px;
-  font-size: 16px;
+  font-size: 16px!important;
   letter-spacing: -.05em;
   color: var(--error);
   padding-left: 26px
@@ -683,7 +683,7 @@ body {
 }
 .discount__btn {
   max-width: none;
-  max-width: 240px
+  max-width: 240px!important
 }
 @font-face {
   font-family: swiper-icons;
@@ -1144,7 +1144,7 @@ body {
     padding: 9px
   }
   .input-error {
-    font-size: 14px;
+    font-size: 14px!important;
     padding-left: 11px
   }
   .hero__info {
