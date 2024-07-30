@@ -2,12 +2,12 @@
   font-family: "OpenSansCondensed", sans-serif;
   margin: 0;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .title-1 {
   font-size: 92px;
   line-height: 104%;
-  text-transform: uppercase;
   @include laptop {
     font-size: 76px;
   }
@@ -22,7 +22,6 @@
 .title-2 {
   font-size: 70px;
   line-height: 140%;
-  text-transform: uppercase;
   @include laptop-min {
     font-size: 50px;
   }
