@@ -35,7 +35,7 @@ export default function sliders() {
       breakpoints: {
         768: {
           slidesPerView: 3,
-          spaceBetween: 0
+          spaceBetween: 3
         }
       }
     });

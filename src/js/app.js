@@ -5,6 +5,7 @@ import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 import inputmask from "./files/inputmask.js";
+import filters from "./files/filters.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -13,3 +14,4 @@ burger();
 spoller();
 sliders();
 inputmask();
+filters();
