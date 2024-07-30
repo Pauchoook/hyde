@@ -13,6 +13,9 @@
 @import "./ui/title";
 @import "./ui/form";
 
+// mini-components
+@import "./mini-components/check-all";
+
 // components
 @import "./components/header";
 
@@ -21,5 +24,6 @@
 @import "./components/top-sales";
 @import "./components/our-products";
 @import "./components/discount";
+@import "./components/new-products";
 
 @import "./components/footer";

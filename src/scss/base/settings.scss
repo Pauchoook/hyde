@@ -7,9 +7,13 @@ html {
 *::after {
   box-sizing: inherit;
 }
-*:not([input]) {
+* {
   caret-color: transparent;
-} 
+}
+
+input {
+  caret-color: auto;
+}
 
 a {
   color: inherit;

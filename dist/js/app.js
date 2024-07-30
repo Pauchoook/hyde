@@ -7810,12 +7810,41 @@
                 new Swiper(topSalesSlider, {
                     speed: 700,
                     modules: [ Autoplay ],
+                    autoplay: true,
                     slidesPerView: "auto",
                     spaceBetween: 20,
                     breakpoints: {
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 0
+                        }
+                    }
+                });
+            }
+            const newProductsSlider = document.querySelector(".new-products__slider");
+            if (newProductsSlider) {
+                new Swiper(newProductsSlider, {
+                    speed: 700,
+                    modules: [ Autoplay ],
+                    autoplay: true,
+                    slidesPerView: "auto",
+                    spaceBetween: 20,
+                    breakpoints: {
+                        1540: {
+                            slidesPerView: 4,
+                            spaceBetween: 90
+                        },
+                        1365: {
+                            slidesPerView: 4,
+                            spaceBetween: 60
+                        },
+                        993: {
+                            slidesPerView: 3,
+                            spaceBetween: 40
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
                         }
                     }
                 });
