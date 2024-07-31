@@ -16,6 +16,9 @@
     font-size: inherit;
     opacity: 0.7;
   }
+  &.textarea {
+    resize: none;
+  }
   &.error {
     border-color: var(--error);
     color: var(--error);
