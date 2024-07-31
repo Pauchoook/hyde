@@ -7,6 +7,7 @@ import sliders from "./files/sliders.js";
 import inputmask from "./files/inputmask.js";
 import filters from "./files/filters.js";
 import tab from "./files/tab.js";
+import popup from "./files/popup.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -17,3 +18,4 @@ sliders();
 inputmask();
 filters();
 tab();
+popup();

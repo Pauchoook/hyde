@@ -1,15 +1,10 @@
 .auth {
-  min-height: 100vh;
-  &__wrapper {
-    display: flex;
-    height: 100%;
-    min-height: 100vh;
-  }
-  &__container {
+  display: flex;
+  &__body {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    flex: 1;
+    padding: 40px 20px 20px 20px;
     @include tablet {
       align-items: center;
       justify-content: center;
@@ -73,11 +68,15 @@
       padding: 12px;
     }
   }
+  &__tab {
+    width: 100%;
+  }
   &__form {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
     max-width: 300px;
+    width: 100%;
     margin-top: 30px;
     margin-bottom: 20px;
   }
