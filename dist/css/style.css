@@ -483,6 +483,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   z-index: 100;
   background-color: #fff
 }
@@ -1294,6 +1295,71 @@ body {
   line-height: 150%;
   transition: color .2s ease
 }
+.password {
+  margin-top: 95px;
+  padding: 80px 0;
+  background-color: var(--hoki);
+  border-radius: 42px;
+  color: #fff
+}
+.password__content {
+  margin: 40px 0 0 0;
+  font-size: 20px;
+  line-height: 140%;
+  max-width: 670px
+}
+.password__form {
+  max-width: 575px;
+  margin-top: 30px
+}
+.password__form-item:not(:last-child) {
+  margin-bottom: 30px
+}
+.password__form-title {
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -.05em
+}
+.password__input {
+  width: 100%
+}
+.password__input:not(:last-child) {
+  margin-bottom: 6px
+}
+.password__input-check {
+  display: none
+}
+.password__input-check:checked+label::before {
+  background: url(../img/mark.svg) center/17px 10px no-repeat
+}
+.password__personal-data-btn {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -.05em;
+  padding-left: 35px;
+  max-width: 350px
+}
+.password__personal-data-btn a {
+  text-decoration: underline
+}
+.password__personal-data-btn::before {
+  position: absolute;
+  content: "";
+  top: 22px;
+  left: 0;
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px
+}
+.password__btn {
+  margin-top: 20px;
+  max-width: 325px
+}
 .footer {
   position: relative;
   padding: 75px 0 45px 0;
@@ -1866,6 +1932,9 @@ body {
   .shop__product {
     flex-basis: calc(33% - 10px)
   }
+  .password__content {
+    font-size: 18px
+  }
   .footer__logo {
     width: 260px
   }
@@ -2247,6 +2316,12 @@ body {
   .auth__help {
     font-size: 14px
   }
+  .password {
+    padding-top: 60px
+  }
+  .password__personal-data-btn {
+    font-size: 12px
+  }
   .footer {
     padding: 30px 0 20px 0
   }
@@ -2357,6 +2432,10 @@ body {
   }
   .shop__product-img {
     height: 275px
+  }
+  .password__content {
+    margin-top: 50px;
+    font-size: 14px
   }
   .footer__container {
     flex-direction: column;
