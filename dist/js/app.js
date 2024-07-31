@@ -8050,6 +8050,22 @@
                     }
                 });
             }
+            const historySlider = document.querySelector(".history-article__slider");
+            if (historySlider) {
+                new Swiper(historySlider, {
+                    speed: 700,
+                    modules: [ Autoplay ],
+                    autoplay: true,
+                    slidesPerView: "auto",
+                    spaceBetween: 30,
+                    grabCursor: true,
+                    breakpoints: {
+                        993: {
+                            spaceBetween: 85
+                        }
+                    }
+                });
+            }
         }
         __webpack_require__(660);
         function inputmask_inputmask() {}
