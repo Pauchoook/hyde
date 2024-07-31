@@ -2009,6 +2009,56 @@ body {
   height: 20px;
   border: 1px solid var(--mine-shaft)
 }
+.address__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px
+}
+.address__item {
+  display: flex;
+  align-items: center;
+  gap: 75px
+}
+.address__item-el {
+  border-radius: 60px;
+  border: 1px solid var(--mine-shaft);
+  max-width: 575px;
+  padding: 18px 30px;
+  width: 100%
+}
+.address__item-btn {
+  font-size: 16px;
+  letter-spacing: -.05em;
+  opacity: .7;
+  transition: opacity .2s ease
+}
+.address__btn-add {
+  display: block;
+  max-width: 325px;
+  font-size: 16px;
+  padding: 17px;
+  margin-top: 40px
+}
+.address__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  max-width: 740px
+}
+.address__input {
+  width: 100%;
+  border-color: var(--mine-shaft);
+  color: var(--mine-shaft)
+}
+.address__input::-webkit-inner-spin-button,
+.address__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+.address__form-btn {
+  margin-top: 40px;
+  max-width: 325px
+}
 .footer {
   position: relative;
   padding: 75px 0 45px 0;
@@ -3293,6 +3343,12 @@ body {
   .my-balance__form {
     row-gap: 10px
   }
+  .address__item-btn {
+    font-size: 14px
+  }
+  .address__btn-add {
+    font-size: 14px
+  }
   .footer {
     padding: 30px 0 20px 0
   }
@@ -3587,6 +3643,31 @@ body {
   .my-balance__form-btn {
     max-width: 100%
   }
+  .address__item {
+    padding: 15px;
+    border: 1px solid var(--mine-shaft);
+    border-radius: 20px;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap
+  }
+  .address__item-el {
+    max-width: none;
+    border: none;
+    padding: 0
+  }
+  .address__item-btn {
+    font-size: 12px
+  }
+  .address__btn-add {
+    padding: 10px;
+    max-width: none;
+    font-size: 12px;
+    margin-top: 30px
+  }
+  .address__form-btn {
+    font-size: 14px
+  }
   .footer__nav {
     flex-direction: column
   }
@@ -3667,6 +3748,9 @@ body {
   }
   .my-balance__check-label a:hover {
     color: var(--hoki)
+  }
+  .address__item-btn:hover {
+    opacity: 1
   }
   .footer__contacts-item:hover {
     opacity: 1;
