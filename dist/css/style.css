@@ -1509,10 +1509,10 @@ body {
 }
 .history-article__body {
   display: flex;
-  justify-content: space-between;
-  gap: 30px
+  gap: 80px
 }
 .history-article__img {
+  display: block;
   width: 480px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1593,6 +1593,198 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 140%
+}
+.profile {
+  padding: 140px 0;
+  position: relative
+}
+.profile::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--mine-shaft)
+}
+.profile__nav-list {
+  margin: 80px 0 65px 0;
+  overflow-x: auto;
+  display: flex;
+  white-space: nowrap
+}
+.profile__nav-list::-webkit-scrollbar {
+  width: 0
+}
+.profile__nav-btn {
+  font-family: Inter,sans-serif;
+  display: block;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  background-color: rgba(0,0,0,0);
+  padding: 15px 40px;
+  border: 1px solid var(--mine-shaft);
+  transition: color .2s ease,border-color .2s ease,background-color .2s ease
+}
+.profile__nav-btn.active {
+  color: #fff;
+  background-color: var(--hoki);
+  border-color: var(--hoki)
+}
+.profile__form {
+  max-width: 575px
+}
+.profile__input {
+  width: 100%;
+  border-color: var(--mine-shaft);
+  color: var(--mine-shaft)
+}
+.profile__input:not(:last-child) {
+  margin-bottom: 5px
+}
+.profile__form-btn {
+  margin-top: 20px;
+  max-width: 325px
+}
+.profile__content {
+  margin: 0;
+  font-size: 20px
+}
+.my-orders__nav {
+  display: flex;
+  gap: 60px
+}
+.my-orders__btn {
+  display: block;
+  opacity: .6;
+  font-size: 20px;
+  line-height: 100%;
+  transition: opacity .2s ease
+}
+.my-orders__btn.active {
+  opacity: 1
+}
+.my-orders__body {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap
+}
+.my-orders__all-title {
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 20px
+}
+.my-orders__all-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px
+}
+.my-orders__all-btn {
+  display: block;
+  padding: 15px 40px;
+  border: 1px solid var(--mine-shaft);
+  border-radius: 38px;
+  font-size: 20px;
+  transition: color .2s ease,border-color .2s ease
+}
+.my-orders__products {
+  max-width: 875px;
+  width: 100%
+}
+.my-orders__products-head {
+  display: flex;
+  align-items: center
+}
+.my-orders__products-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  transition: color .2s ease;
+  color: #000;
+  gap: 10px
+}
+.my-orders__products-btn:not(:last-child) {
+  margin: 0 85px 0 auto
+}
+.my-orders__products-icon {
+  width: 30px;
+  height: 30px;
+  color: inherit
+}
+.my-orders__list {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 90px
+}
+.my-orders__list-item {
+  display: flex;
+  align-items: center
+}
+.my-orders__item-img {
+  width: 165px;
+  height: 250px;
+  border-radius: 20px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-right: 85px
+}
+.my-orders__item-info {
+  margin-right: 15px
+}
+.my-orders__item-type {
+  display: block;
+  font-size: 16px;
+  line-height: 125%;
+  margin-bottom: 10px
+}
+.my-orders__item-title {
+  font-size: 22px;
+  line-height: 140%;
+  margin-bottom: 5px
+}
+.my-orders__item-num {
+  display: block;
+  font-size: 16px;
+  line-height: 125%;
+  opacity: .7
+}
+.my-orders__item-price {
+  margin-left: auto
+}
+.my-orders__item-price-title {
+  display: block;
+  font-size: 16px;
+  line-height: 125%;
+  opacity: .7;
+  margin-bottom: 12px
+}
+.my-orders__item-price-num {
+  font-size: 36px;
+  line-height: 104%
+}
+.my-orders__products-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 70px
+}
+.my-orders__products-info li {
+  display: flex;
+  align-items: center;
+  gap: 3px
+}
+.my-orders__products-info li span {
+  opacity: .7
+}
+.my-orders__products-info li span.title {
+  opacity: 1;
+  font-size: 36px;
+  line-height: 104%
 }
 .footer {
   position: relative;
@@ -2211,6 +2403,9 @@ body {
   .history-article__title-article {
     font-size: 32px
   }
+  .history-article__body {
+    gap: 50px
+  }
   .history-article__img:first-child {
     height: 430px
   }
@@ -2222,6 +2417,30 @@ body {
   }
   .history-article__title {
     font-size: 24px
+  }
+  .profile__nav-btn {
+    font-size: 18px
+  }
+  .profile__content {
+    font-size: 18px
+  }
+  .my-orders__btn {
+    font-size: 18px
+  }
+  .my-orders__all-btn {
+    font-size: 18px
+  }
+  .my-orders__products-btn {
+    font-size: 18px
+  }
+  .my-orders__item-title {
+    font-size: 18px
+  }
+  .my-orders__item-price-num {
+    font-size: 28px
+  }
+  .my-orders__products-info li span.title {
+    font-size: 28px
   }
   .footer__logo {
     width: 260px
@@ -2730,6 +2949,92 @@ body {
     border-radius: 0 0 21px 21px;
     padding: 20px
   }
+  .profile {
+    padding: 90px 0
+  }
+  .profile__nav-list {
+    margin: 50px 0 30px 0
+  }
+  .profile__nav-btn {
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 143%
+  }
+  .profile__content {
+    font-size: 14px
+  }
+  .my-orders__nav {
+    gap: 30px
+  }
+  .my-orders__btn {
+    font-size: 14px
+  }
+  .my-orders__body {
+    gap: 20px
+  }
+  .my-orders__all-title {
+    font-size: 20px
+  }
+  .my-orders__all-btn {
+    font-size: 14px;
+    padding: 8px
+  }
+  .my-orders__products-head {
+    flex-direction: column;
+    align-items: start;
+    order: 2
+  }
+  .my-orders__products-num {
+    margin-top: 40px;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid var(--mine-shaft);
+    opacity: .7
+  }
+  .my-orders__products-btn {
+    font-size: 14px;
+    gap: 10px
+  }
+  .my-orders__products-btn:not(:last-child) {
+    margin: 0 0 10px 0
+  }
+  .my-orders__products-icon {
+    width: 20px;
+    height: 20px
+  }
+  .my-orders__list {
+    row-gap: 30px
+  }
+  .my-orders__item-img {
+    width: 130px;
+    height: 170px;
+    margin-right: 45px
+  }
+  .my-orders__item-type {
+    font-size: 14px
+  }
+  .my-orders__item-title {
+    font-size: 16px
+  }
+  .my-orders__item-num {
+    font-size: 14px
+  }
+  .my-orders__item-price-title {
+    font-size: 14px
+  }
+  .my-orders__item-price-num {
+    font-size: 22px
+  }
+  .my-orders__products-info {
+    margin-top: 45px;
+    row-gap: 10px
+  }
+  .my-orders__products-info li span.title {
+    font-size: 22px
+  }
   .footer {
     padding: 30px 0 20px 0
   }
@@ -2988,6 +3293,23 @@ body {
   .history-article__info {
     padding: 0 20px
   }
+  .my-orders__all {
+    width: 100%
+  }
+  .my-orders__all-btn {
+    width: 100%;
+    text-align: center
+  }
+  .my-orders__list-item {
+    flex-wrap: wrap;
+    gap: 8px
+  }
+  .my-orders__item-info {
+    order: 2
+  }
+  .my-orders__item-price {
+    margin-left: 0
+  }
   .footer__nav {
     flex-direction: column
   }
@@ -3041,6 +3363,21 @@ body {
   }
   .history__nav-link:hover {
     opacity: 1
+  }
+  .profile__nav-btn:hover {
+    color: #fff;
+    background-color: var(--hoki);
+    border-color: var(--hoki)
+  }
+  .my-orders__btn:hover {
+    opacity: 1
+  }
+  .my-orders__all-btn:hover {
+    border-color: var(--hoki);
+    color: var(--hoki)
+  }
+  .my-orders__products-btn:hover {
+    color: var(--hoki)
   }
   .footer__contacts-item:hover {
     opacity: 1;

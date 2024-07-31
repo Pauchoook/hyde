@@ -42,8 +42,10 @@
   }
   &__body {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 80px;
+    @include laptop {
+      gap: 50px;
+    }
     @include laptop-min {
       flex-direction: column;
     }
@@ -51,9 +53,8 @@
       gap: 20px;
     }
   }
-  &__images {
-  }
   &__img {
+    display: block;
     width: 480px;
     object-fit: cover;
     border-radius: 20px;
