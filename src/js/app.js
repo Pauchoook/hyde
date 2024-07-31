@@ -8,6 +8,8 @@ import inputmask from "./files/inputmask.js";
 import filters from "./files/filters.js";
 import tab from "./files/tab.js";
 import popup from "./files/popup.js";
+import dropdown from "./files/dropdwn.js";
+import numbersBasket from "./files/numbers-busket.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -19,3 +21,5 @@ inputmask();
 filters();
 tab();
 popup();
+dropdown();
+numbersBasket();

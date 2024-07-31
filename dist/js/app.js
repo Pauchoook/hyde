@@ -7013,6 +7013,39 @@
             }
         }
     }
+    function dropdown() {
+        const buttonsDropdown = document.querySelectorAll(".btn-dropdown");
+        if (buttonsDropdown.length) buttonsDropdown.forEach((btn => {
+            btn.addEventListener("click", (e => {
+                e.stopPropagation();
+                const dropdown = btn.closest(".dropdown");
+                const dropdownItem = dropdown.querySelector(".dropdown__item");
+                dropdown.classList.toggle("open");
+                document.addEventListener("click", handleClose);
+                dropdownItem.addEventListener("click", (e => e.stopPropagation()));
+                function handleClose() {
+                    dropdown.classList.remove("open");
+                    return document.removeEventListener("click", handleClose);
+                }
+            }));
+        }));
+    }
+    function numbersBasket() {
+        const nav = document.querySelectorAll(".header__basket-numbers");
+        if (nav.length) nav.forEach((n => {
+            const btnMinus = n.querySelector(".btn-minus");
+            const btnPlus = n.querySelector(".btn-plus");
+            const currentNum = n.querySelector(".header__basket-number");
+            btnMinus.addEventListener("click", (() => {
+                const num = Number(currentNum.textContent);
+                if (num >= 1) currentNum.textContent = num - 1;
+            }));
+            btnPlus.addEventListener("click", (() => {
+                const num = Number(currentNum.textContent);
+                currentNum.textContent = num + 1;
+            }));
+        }));
+    }
     isWebp();
     mediaAdaptive();
     burger();
@@ -7022,4 +7055,6 @@
     filters();
     tab();
     popup();
+    dropdown();
+    numbersBasket();
 })();

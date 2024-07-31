@@ -74,11 +74,13 @@
     position: fixed;
     inset: 0;
     z-index: 50;
-    opacity: .5;
+    opacity: 0.5;
     visibility: hidden;
     opacity: 0;
     background-color: black;
-    transition: opacity .5s ease, visibility .5s ease;
+    transition:
+      opacity 0.5s ease,
+      visibility 0.5s ease;
     &.active {
       visibility: visible;
       opacity: 0.5;
@@ -171,6 +173,7 @@
     }
   }
   &__nav-profile-btn {
+    position: relative;
     display: block;
     width: 40px;
     height: 40px;
@@ -193,5 +196,93 @@
   &__nav-profile-icon {
     width: 100%;
     height: 100%;
+  }
+  &__nav-profile-number {
+    position: absolute;
+    @include flex-center;
+    font-size: 8px;
+    letter-spacing: -0.05em;
+    background-color: var(--hoki);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: -5px;
+    bottom: -5px;
+  }
+  &__basket-title {
+    display: block;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    margin-bottom: 30px;
+  }
+  &__basket-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  &__basket-item {
+    display: flex;
+    gap: 30px;
+  }
+  &__basket-img {
+    width: 120px;
+    height: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  &__basket-info {
+  }
+  &__basket-item-title {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &__basket-type {
+    font-size: 12px;
+    line-height: 167%;
+    display: block;
+  }
+  &__basket-numbers {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 10px 0px;
+  }
+  &__basket-number-btn {
+    position: relative;
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+    color: var(--mine-shaft);
+    border: 1px solid var(--mine-shaft);
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+    span {
+      position: absolute;
+      width: 11px;
+      color: inherit;
+      background-color: currentColor;
+      height: 1px;
+      &:nth-child(2) {
+        transform: rotate(90deg);
+      }
+    }
+    @include hover {
+      color: var(--hoki);
+      border-color: var(--hoki);
+    }
+  }
+  &__basket-number {
+  }
+  &__basket-price {
+    font-size: 20px;
+    line-height: 104%;
+  }
+  &__basket-btn {
+    display: block;
+    margin: 60px auto 0px auto;
+    font-size: 16px;
+    padding: 16px;
+    max-width: 245px;
   }
 }

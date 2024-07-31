@@ -1,7 +1,11 @@
 .hero {
+  margin-top: 95px;
   position: relative;
   z-index: 1;
   color: white;
+  @include tablet {
+    margin-top: 55px;
+  }
   &__slider {
     position: absolute !important;
     inset: 0;
