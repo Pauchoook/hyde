@@ -1,0 +1,114 @@
+.my-balance {
+  &__start-window {
+  }
+  &__balance {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__num-balance {
+    font-size: 36px;
+    line-height: 104%;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+  &__btn-start {
+    margin-top: 45px;
+    max-width: 325px;
+    font-size: 16px;
+    padding: 16px;
+    @include tablet {
+      margin-top: 30px;
+      font-size: 14px;
+      padding: 10px;
+    }
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  &__replenish {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+  &__replenish-title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__replenish-nav {
+    display: flex;
+  }
+  &__replenish-btn {
+  }
+  &__form {
+    max-width: 575px;
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    @include tablet {
+      row-gap: 10px;
+    }
+  }
+  &__form-input {
+    border-color: var(--mine-shaft);
+    color: var(--mine-shaft);
+    max-width: 50%;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    @include mobile {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &__form-btn {
+    max-width: 50%;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  &__check {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: url("@img/mark-black.svg") center / 17px 14px no-repeat;
+      }
+    }
+  }
+  &__check-label {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    padding-left: 40px;
+    max-width: 380px;
+    a {
+      text-decoration: underline;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--hoki);
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--mine-shaft);
+    }
+  }
+}

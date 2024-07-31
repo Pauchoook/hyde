@@ -250,6 +250,29 @@ body {
   border: 1px solid transparent;
   transition: border-color .2s ease,color .2s ease
 }
+.btn-primary--blue {
+  font-family: Inter,sans-serif;
+  text-transform: none;
+  background-color: rgba(0,0,0,0);
+  font-weight: 400;
+  color: var(--mine-shaft);
+  width: auto;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 15px 40px;
+  max-width: auto;
+  border-color: var(--mine-shaft);
+  transition: background-color .2s ease,color .2s ease,border-color .2s ease
+}
+.btn-primary--blue.active {
+  background-color: var(--hoki);
+  color: #fff;
+  border-color: var(--hoki)
+}
+.btn-primary--blue:focus {
+  border-color: var(--hoki)!important;
+  color: #fff!important
+}
 .btn-primary:focus {
   border-color: var(--mine-shaft);
   color: var(--mine-shaft)
@@ -271,6 +294,10 @@ body {
 }
 .title-2 {
   font-size: 70px;
+  line-height: 140%
+}
+.title-3 {
+  font-size: 36px;
   line-height: 140%
 }
 .input {
@@ -1769,6 +1796,9 @@ body {
   margin: 0;
   font-size: 20px
 }
+.my-orders__container {
+  padding: 0 35px
+}
 .my-orders__nav {
   display: flex;
   gap: 60px
@@ -1893,7 +1923,7 @@ body {
 .my-orders__products-info li {
   display: flex;
   align-items: center;
-  gap: 3px
+  gap: 7px
 }
 .my-orders__products-info li span {
   opacity: .7
@@ -1902,6 +1932,82 @@ body {
   opacity: 1;
   font-size: 36px;
   line-height: 104%
+}
+.my-balance__balance {
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+.my-balance__num-balance {
+  font-size: 36px;
+  line-height: 104%
+}
+.my-balance__btn-start {
+  margin-top: 45px;
+  max-width: 325px;
+  font-size: 16px;
+  padding: 16px
+}
+.my-balance__replenish {
+  display: none
+}
+.my-balance__replenish.open {
+  display: block
+}
+.my-balance__replenish-title {
+  margin-bottom: 40px
+}
+.my-balance__replenish-nav {
+  display: flex
+}
+.my-balance__form {
+  max-width: 575px;
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px
+}
+.my-balance__form-input {
+  border-color: var(--mine-shaft);
+  color: var(--mine-shaft);
+  max-width: 50%
+}
+.my-balance__form-input::-webkit-inner-spin-button,
+.my-balance__form-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+.my-balance__form-btn {
+  max-width: 50%
+}
+.my-balance__check {
+  display: none
+}
+.my-balance__check:checked+label::before {
+  background: url(../img/mark-black.svg) center/17px 14px no-repeat
+}
+.my-balance__check-label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  letter-spacing: -.05em;
+  padding-left: 40px;
+  max-width: 380px
+}
+.my-balance__check-label a {
+  text-decoration: underline;
+  transition: color .2s ease
+}
+.my-balance__check-label::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--mine-shaft)
 }
 .footer {
   position: relative;
@@ -2371,8 +2477,14 @@ body {
     max-width: 360px;
     font-size: 32px
   }
+  .btn-primary--blue {
+    font-size: 18px
+  }
   .title-1 {
     font-size: 76px
+  }
+  .title-3 {
+    font-size: 28px
   }
   .header__logo {
     width: 90px;
@@ -2557,6 +2669,9 @@ body {
     font-size: 28px
   }
   .my-orders__products-info li span.title {
+    font-size: 28px
+  }
+  .my-balance__num-balance {
     font-size: 28px
   }
   .footer__logo {
@@ -2776,11 +2891,17 @@ body {
     padding: 8px;
     font-size: 18px
   }
+  .btn-primary--blue {
+    font-size: 16px
+  }
   .title-1 {
     font-size: 26px
   }
   .title-2 {
     font-size: 26px
+  }
+  .title-3 {
+    font-size: 22px
   }
   .input {
     font-size: 12px;
@@ -3083,6 +3204,9 @@ body {
   .profile__content {
     font-size: 14px
   }
+  .my-orders__container {
+    padding: 0 20px
+  }
   .my-orders__nav {
     gap: 30px
   }
@@ -3154,6 +3278,20 @@ body {
   }
   .my-orders__products-info li span.title {
     font-size: 22px
+  }
+  .my-balance__num-balance {
+    font-size: 22px
+  }
+  .my-balance__btn-start {
+    margin-top: 30px;
+    font-size: 14px;
+    padding: 10px
+  }
+  .my-balance__replenish-title {
+    margin-bottom: 30px
+  }
+  .my-balance__form {
+    row-gap: 10px
   }
   .footer {
     padding: 30px 0 20px 0
@@ -3318,6 +3456,11 @@ body {
   .btn-primary {
     max-width: 205px
   }
+  .btn-primary--blue {
+    padding: 6px 15px;
+    font-size: 12px;
+    line-height: 167%
+  }
   .rating__item {
     width: 8px;
     height: 8px
@@ -3434,6 +3577,16 @@ body {
   .my-orders__item-price {
     margin-left: 0
   }
+  .my-balance__btn-start {
+    max-width: 100%
+  }
+  .my-balance__form-input {
+    max-width: 100%;
+    width: 100%
+  }
+  .my-balance__form-btn {
+    max-width: 100%
+  }
   .footer__nav {
     flex-direction: column
   }
@@ -3441,6 +3594,11 @@ body {
 @media (any-hover:hover) {
   .btn-primary:hover {
     color: #fff
+  }
+  .btn-primary--blue:hover {
+    background-color: var(--hoki);
+    color: #fff;
+    border-color: var(--hoki)
   }
   .check-all:hover {
     color: var(--hoki)
@@ -3505,6 +3663,9 @@ body {
     color: var(--hoki)
   }
   .my-orders__products-btn:hover {
+    color: var(--hoki)
+  }
+  .my-balance__check-label a:hover {
     color: var(--hoki)
   }
   .footer__contacts-item:hover {

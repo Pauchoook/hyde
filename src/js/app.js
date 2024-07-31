@@ -10,6 +10,7 @@ import tab from "./files/tab.js";
 import popup from "./files/popup.js";
 import dropdown from "./files/dropdwn.js";
 import numbersBasket from "./files/numbers-busket.js";
+import balanceShow from "./files/balance-show.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -23,3 +24,4 @@ tab();
 popup();
 dropdown();
 numbersBasket();
+balanceShow();

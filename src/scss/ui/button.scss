@@ -29,6 +29,37 @@
   @include hover {
     color: #fff;
   }
+  &--blue {
+    font-family: "Inter", sans-serif;
+    text-transform: none;
+    background-color: transparent;
+    font-weight: 400;
+    color: var(--mine-shaft);
+    width: auto;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 15px 40px;
+    max-width: auto;
+    border-color: var(--mine-shaft);
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+    &.active {
+      background-color: var(--hoki);
+      color: #fff;
+      border-color: var(--hoki);
+    }
+    @include hover {
+      background-color: var(--hoki);
+      color: #fff;
+      border-color: var(--hoki);
+    }
+    &:focus {
+      border-color: var(--hoki) !important;
+      color: #fff !important;
+    }
+  }
   &:focus {
     border-color: var(--mine-shaft);
     color: var(--mine-shaft);
@@ -36,13 +67,24 @@
   @include laptop {
     max-width: 360px;
     font-size: 32px;
+    &--blue {
+      font-size: 18px;
+    }
   }
   @include tablet {
     max-width: 250px;
     padding: 8px;
     font-size: 18px;
+    &--blue {
+      font-size: 16px;
+    }
   }
   @include mobile {
     max-width: 205px;
+    &--blue {
+      padding: 6px 15px;
+      font-size: 12px;
+      line-height: 167%;
+    }
   }
 }
