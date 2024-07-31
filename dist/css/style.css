@@ -179,7 +179,8 @@ template {
   --wheat: #F7D9B2;
   --hoki: #5F7C9C;
   --error: #fe0202;
-  --elephant: #154551
+  --elephant: #154551;
+  --gray: #b7b7b7
 }
 html {
   box-sizing: border-box
@@ -563,6 +564,55 @@ body {
   background-color: #fff;
   border-radius: 42px;
   padding: 40px 20px
+}
+.notification {
+  position: fixed;
+  inset: 0;
+  z-index: -1
+}
+.notification.hide .notification__body {
+  -webkit-transform: translateY(-500px)!important;
+  transform: translateY(-500px)!important
+}
+.notification.open {
+  z-index: 100
+}
+.notification.open .notification__body {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  z-index: 1000
+}
+.notification__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  max-width: 390px;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  -webkit-transform: translateY(-390px);
+  transform: translateY(-390px);
+  margin: 0 auto;
+  border-radius: 40px;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease,-webkit-transform .5s ease;
+  color: var(--mine-shaft);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,.25)
+}
+.notification__title {
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center
+}
+.notification__btn {
+  max-width: 225px;
+  font-size: 16px;
+  line-height: 104%;
+  padding: 17px;
+  margin-top: 40px
 }
 .header {
   position: fixed;
@@ -2311,6 +2361,124 @@ body {
   height: 20px;
   border: 1px solid var(--mine-shaft)
 }
+.product {
+  padding: 150px 0 55px 0
+}
+.product__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1660px;
+  width: 100%;
+  margin: 0 auto
+}
+.product__img {
+  width: 590px;
+  height: auto
+}
+.product__info {
+  max-width: 890px;
+  width: 100%
+}
+.product__content {
+  margin: 12px 0 0 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+  max-width: 695px;
+  opacity: .6
+}
+.product__subcontent {
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -.05em;
+  max-width: 610px
+}
+.product__specifications {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px
+}
+.product__specification-item {
+  display: flex;
+  font-size: 16px;
+  letter-spacing: -.05em
+}
+.product__specification-name {
+  flex: 0 1 240px
+}
+.product__specification-value {
+  opacity: .7
+}
+.product__rec {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 16px;
+  letter-spacing: -.05em
+}
+.product__rec-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px
+}
+.product__rec-item {
+  display: flex;
+  align-items: center;
+  gap: 60px
+}
+.product__rec-icon {
+  width: 30px;
+  height: 30px
+}
+.product__bars {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 890px;
+  width: 100%;
+  gap: 30px;
+  margin-top: 30px
+}
+.product__bars-item {
+  flex: 0 1 160px
+}
+.product__bar {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--gray)
+}
+.product__bar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000
+}
+.product__bar-name {
+  display: block;
+  font-size: 16px;
+  letter-spacing: -.05em;
+  margin-top: 4px
+}
+.product__footer {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  margin-top: 50px
+}
+.product__buy {
+  padding: 10px;
+  font-size: 22px;
+  line-height: 140%;
+  max-width: 325px
+}
 .footer {
   position: relative;
   padding: 75px 0 45px 0;
@@ -2773,6 +2941,10 @@ body {
   .basket {
     flex-direction: column-reverse
   }
+  .product__body {
+    justify-content: start;
+    gap: 40px
+  }
   .footer__foots {
     display: none
   }
@@ -2985,6 +3157,18 @@ body {
   .basket__product-price {
     font-size: 28px
   }
+  .product__img {
+    width: 400px
+  }
+  .product__info {
+    max-width: 500px
+  }
+  .product__content {
+    font-size: 18px
+  }
+  .product__bars {
+    justify-content: start
+  }
   .footer__logo {
     width: 260px
   }
@@ -3173,6 +3357,17 @@ body {
   .basket__delivery-address {
     font-size: 18px
   }
+  .product__body {
+    flex-wrap: wrap;
+    gap: 15px
+  }
+  .product__img {
+    width: 590px;
+    margin: 0 auto
+  }
+  .product__info {
+    max-width: none
+  }
   .footer__logo {
     width: 180px
   }
@@ -3241,6 +3436,12 @@ body {
   }
   .check-all__arrow {
     width: 30px
+  }
+  .notification__title {
+    font-size: 18px
+  }
+  .notification__btn {
+    margin-top: 30px
   }
   .hero {
     margin-top: 55px
@@ -3679,6 +3880,42 @@ body {
     gap: 30px;
     margin-bottom: 30px
   }
+  .product {
+    padding: 90px 0 40px 0
+  }
+  .product__content {
+    font-size: 16px
+  }
+  .product__subcontent {
+    font-size: 14PX
+  }
+  .product__specification-item {
+    font-size: 14px
+  }
+  .product__specification-name {
+    flex-basis: 175px
+  }
+  .product__rec {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 15px;
+    font-size: 14px
+  }
+  .product__rec .product__specification-name {
+    flex: auto
+  }
+  .product__rec-item {
+    gap: 45px
+  }
+  .product__bar {
+    width: 80px
+  }
+  .product__bar-name {
+    font-size: 14px
+  }
+  .product__footer {
+    gap: 20px
+  }
   .footer {
     padding: 30px 0 20px 0
   }
@@ -3855,6 +4092,11 @@ body {
     padding: 15px;
     width: 300px
   }
+  .notification__body {
+    max-width: calc(100% - 20px);
+    min-width: 350px;
+    width: auto
+  }
   .header__nav-profile {
     gap: 10px
   }
@@ -4022,6 +4264,24 @@ body {
   }
   .basket__btn-spoller {
     font-size: 12px
+  }
+  .product__bars {
+    gap: 0;
+    row-gap: 15px
+  }
+  .product__bars-item {
+    flex-basis: 50%
+  }
+  .product__footer {
+    margin-top: 35px;
+    flex-direction: row-reverse;
+    justify-content: space-between
+  }
+  .product__buy {
+    max-width: none;
+    width: auto;
+    padding: 5px 45px;
+    font-size: 18px
   }
   .footer__nav {
     flex-direction: column
