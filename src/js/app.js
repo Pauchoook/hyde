@@ -11,6 +11,7 @@ import popup from "./files/popup.js";
 import dropdown from "./files/dropdwn.js";
 import numbersBasket from "./files/numbers-busket.js";
 import balanceShow from "./files/balance-show.js";
+import deliveryChange from "./files/delivery-change.js";
 
 functions.isWebp();
 functions.mediaAdaptive();
@@ -25,3 +26,4 @@ popup();
 dropdown();
 numbersBasket();
 balanceShow();
+deliveryChange();

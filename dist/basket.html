@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240731201629">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240731215738">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -199,7 +199,7 @@
 				<h2 class="title title-3">Оформление заказа</h2>
 				<form class="basket">
 					<div class="basket__info">
-						<div class="basket__item">
+						<div class="basket__item _bg">
 							<h3 class="title basket__item-title">покупатель</h3>
 							<input type="text" name="name" placeholder="Имя и Фамилия" class="input profile__input" />
 							<input type="email" name="email" placeholder="Электронная почта" class="input profile__input" />
@@ -210,6 +210,80 @@
 								<input type="text" name="sertificate" placeholder="Подарочный сертификат" class="input profile__input" />
 							</div>
 						</div>
+						<div class="basket__item">
+							<h3 class="title basket__item-title">Способ доставки</h3>
+							<div class="basket__delivery-buttons">
+								<button type="button" data-tab="delivery" class="btn tab-btn btn-primary btn-primary--blue active">
+									Доставка
+								</button>
+								<button type="button" data-tab="pickup" class="btn tab-btn btn-primary btn-primary--blue">
+									Самовывоз
+								</button>
+							</div>
+							<div data-spollers data-tab="delivery" class="tab active basket__delivery-item basket__delivery-spoller">
+								<button data-spoller class="btn basket__btn-spoller">
+									<input type="text" name="delivery-address" class="basket__delivery-input" />
+									<span class="basket__delivery-view">Выберите адрес доставки</span>
+									<svg class="basket__btn-spoller-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L9.25806 9L17 1" stroke="currentColor" stroke-linecap="round" />
+									</svg>
+								</button>
+								<ul class="list basket__delivery-addresses">
+									<li class="basket__delivery-address">
+										Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 12
+									</li>
+									<li class="basket__delivery-address">
+										Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 13
+									</li>
+								</ul>
+							</div>
+							<div data-spollers data-tab="pickup" class="tab basket__delivery-item basket__delivery-spoller">
+								<button data-spoller class="btn basket__btn-spoller">
+									<input type="text" name="delivery-pickup" class="basket__delivery-input" />
+									<span class="basket__delivery-view">Выберите адрес пункта самовывоза</span>
+									<svg class="basket__btn-spoller-arrow" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L9.25806 9L17 1" stroke="currentColor" stroke-linecap="round" />
+									</svg>
+								</button>
+								<ul class="list basket__delivery-addresses">
+									<li class="basket__delivery-address">
+										Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 14
+									</li>
+									<li class="basket__delivery-address">
+										Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 15
+									</li>
+								</ul>
+							</div>
+							<p class="basket__delivery-date"><span>Ожидаемая дата доставки:</span> 15 июля 2024 г.</p>
+						</div>
+						<div class="basket__item">
+							<h3 class="title basket__item-title">Способ оплаты</h3>
+							<input type="radio" name="waypay" id="waypay-card" checked class="basket__waypay-check">
+							<label for="waypay-card" class="basket__waypay-label">
+								<svg class="basket__waypay-icon">
+									<use xlink:href='img/icons/icons.svg#icon-card'></use>
+								</svg>
+								<span>Оплата картой онлайн</span>
+							</label>
+							<input type="radio" name="waypay" id="waypay-cash" class="basket__waypay-check">
+							<label for="waypay-cash" class="basket__waypay-label">
+								<svg class="basket__waypay-icon">
+									<use xlink:href='img/icons/icons.svg#icon-box'></use>
+								</svg>
+								<span>Оплата при получении</span>
+							</label>
+						</div>
+						<div class="basket__item">
+							<div class="basket__all-price">
+								<p class="profile__content">Общая сумма заказа:</p>
+								<span class="title title-3">3 600 ₽</span>
+							</div>
+							<button class="btn btn-primary form-btn basket__btn-submit">Оформить заказ</button>
+							<input type="checkbox" name="delivery-personal" id="delivery-personal" class="basket__input-personal">
+							<label for="delivery-personal" class="basket__label-personal">
+								 Согласен с <a href="#">условиями обработки персональных данных</a>, <a href="#">Пользовательского соглашения</a> и <a href="#">Публичной оферты</a>
+							</label>
+						</div>
 					</div>
 					<div class="basket__products">
 						<div class="basket__products-head">
@@ -218,7 +292,7 @@
 						</div>
 						<ul class="list basket__products-list">
 							<li class="basket__product">
-								<img src="img/products/bean.webp" alt="bean" class="basket__product-img">
+								<img src="img/products/bean.webp" alt="bean" class="basket__product-img" />
 								<div class="basket__product-info">
 									<span class="basket__product-type">Кофе в зернах</span>
 									<h5 class="title basket__product-title">Hyde Bean Бразилия, 1 кг</h5>
@@ -244,7 +318,7 @@
 								</div>
 							</li>
 							<li class="basket__product">
-								<img src="img/products/bean.webp" alt="bean" class="basket__product-img">
+								<img src="img/products/bean.webp" alt="bean" class="basket__product-img" />
 								<div class="basket__product-info">
 									<span class="basket__product-type">Кофе в зернах</span>
 									<h5 class="title basket__product-title">Hyde Bean Бразилия, 1 кг</h5>
@@ -404,7 +478,7 @@
 		</div>
 	</footer>
 
-	<script src="js/app.min.js?_v=20240731201629"></script>
+	<script src="js/app.min.js?_v=20240731215738"></script>
 </body>
 
 </html>
