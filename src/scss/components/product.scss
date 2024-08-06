@@ -1,7 +1,27 @@
 .product {
-  padding: 150px 0px 55px 0px;
+  padding: 150px 0px;
   @include tablet {
     padding: 90px 0px 40px 0px;
+  }
+  &__prev {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--mine-shaft);
+    margin-bottom: 40px;
+    opacity: 0.6;
+    transition: opacity .2s ease, color .2s ease;
+    @include hover {
+      color: var(--hoki);
+      opacity: 1;
+    }
+  }
+  &__prev-icon {
+    width: 40px;
+    height: 20px;
+    transform: rotate(180deg);
   }
   &__body {
     display: flex;
@@ -25,6 +45,9 @@
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    @include tablet {
+      width: 100%;
+    }
   }
   &__slider {
     width: 535px;
@@ -35,13 +58,6 @@
     }
   }
   &__slide {
-    @include laptop {
-      width: 400px;
-    }
-    @include laptop-min {
-      width: 590px;
-      margin: 0 auto;
-    }
   }
   &__img {
     display: block;
@@ -60,7 +76,7 @@
   &__pagination-btn {
     border-radius: 20px;
     overflow: hidden;
-    width: 140px; 
+    width: 140px;
     height: 160px;
     border: 1px solid transparent;
     &.active {
@@ -117,7 +133,7 @@
     letter-spacing: -0.05em;
     max-width: 610px;
     @include tablet {
-      font-size: 14PX;
+      font-size: 14px;
     }
   }
   &__specifications {

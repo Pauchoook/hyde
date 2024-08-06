@@ -1,0 +1,15 @@
+.rec-products {
+  padding-bottom: 140px;
+  @include tablet {
+    padding-bottom: 70px;
+  }
+  &__title {
+    margin-bottom: 60px;
+    @include laptop {
+      padding: 0;
+    }
+    @include tablet {
+      margin-bottom: 35px;
+    }
+  }
+}

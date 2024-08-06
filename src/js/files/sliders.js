@@ -23,7 +23,28 @@ export default function sliders() {
     });
   }
 
-  const topSalesSlider = document.querySelector(".product-slider__slider");
+  const recProductSlider = document.querySelector(".rec-products__slider");
+  if (recProductSlider) {
+    const swiper = new Swiper(recProductSlider, {
+      speed: 700,
+      modules: [Autoplay],
+      autoplay: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      breakpoints: {
+        1580: {
+          slidesPerView: 4,
+          spaceBetween: 75
+        },  
+        768: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  }
+
+  const topSalesSlider = document.querySelector(".top-sales__slider");
   if (topSalesSlider) {
     const swiper = new Swiper(topSalesSlider, {
       speed: 700,
@@ -141,7 +162,6 @@ export default function sliders() {
     const swiper = new Swiper(productSlider, {
       speed: 700,
       modules: [Autoplay, Pagination],
-      slidesPerView: "auto",
       grabCursor: true,
       spaceBetween: 15,
       pagination: {

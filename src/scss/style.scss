@@ -22,13 +22,14 @@
 @import "./mini-components/breadcrumbs";
 @import "./mini-components/dropdown";
 @import "./mini-components/notification";
+@import "./mini-components/product-slider";
 
 // components
 @import "./components/header";
 
 @import "./components/hero";
 @import "./components/advantages";
-@import "./components/product-slider";
+@import "./components/top-sales";
 @import "./components/our-products";
 @import "./components/discount";
 @import "./components/new-products";
@@ -46,5 +47,6 @@
 @import "./components/address";
 @import "./components/basket";
 @import "./components/product";
+@import "./components/rec-products";
 
 @import "./components/footer";

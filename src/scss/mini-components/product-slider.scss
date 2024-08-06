@@ -1,17 +1,7 @@
 .product-slider {
-  padding-bottom: 70px;
-  &__header {
-    @include flex-between;
-    padding: 0 20px;
-    @include laptop {
-      padding: 0;
-    }
-  }
-  &__slider {
-    margin-top: 80px;
-    @include tablet {
-      margin-top: 30px;
-    }
+  margin-top: 80px;
+  @include tablet {
+    margin-top: 30px;
   }
   &__item {
     @include tablet {
@@ -50,6 +40,15 @@
     }
     @include tablet {
       font-size: 16px;
+    }
+  }
+  &__content {
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.05em;
+    margin: 0;
+    @include tablet {
+      font-size: 12px;
     }
   }
   &__price-info {
