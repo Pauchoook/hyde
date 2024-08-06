@@ -6,22 +6,35 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
     max-width: 1660px;
     width: 100%;
     margin: 0 auto;
     @include desktop {
       justify-content: start;
-      gap: 40px;
     }
-    @include laptop-min {
+    @include laptop {
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       gap: 15px;
     }
   }
-  &__img {
-    width: 590px;
-    height: auto;
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__slider {
+    width: 535px;
+    height: 575px;
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__slide {
     @include laptop {
       width: 400px;
     }
@@ -29,6 +42,48 @@
       width: 590px;
       margin: 0 auto;
     }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__slider-pagination {
+    display: flex;
+    gap: 20px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__pagination-btn {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 140px; 
+    height: 160px;
+    border: 1px solid transparent;
+    &.active {
+      border-color: var(--half-backed);
+    }
+    @include laptop {
+      width: 100px;
+      height: 120px;
+    }
+    @include tablet {
+      width: 80px;
+      height: 100px;
+      border-radius: 12px;
+    }
+    @include mobile {
+      width: 60px;
+      height: 80px;
+    }
+  }
+  &__pagination-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   &__info {
     max-width: 890px;

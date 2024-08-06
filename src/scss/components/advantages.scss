@@ -23,11 +23,12 @@
   }
   &__list {
     @include flex-between;
+    padding: 30px 50px;
+    border-radius: 21px;
+    background-color: var(--hoki);
     @include laptop {
       width: fit-content;
       padding: 50px 20px;
-      background-color: var(--hoki);
-      border-radius: 21px;
       gap: 20px;
     }
   }

@@ -23,7 +23,7 @@ export default function sliders() {
     });
   }
 
-  const topSalesSlider = document.querySelector(".top-sales__slider");
+  const topSalesSlider = document.querySelector(".product-slider__slider");
   if (topSalesSlider) {
     const swiper = new Swiper(topSalesSlider, {
       speed: 700,
@@ -33,9 +33,12 @@ export default function sliders() {
       spaceBetween: 20,
       grabCursor: true,
       breakpoints: {
+        1580: {
+          slidesPerView: 4,
+          spaceBetween: 75
+        },  
         768: {
           slidesPerView: 3,
-          spaceBetween: 3
         }
       }
     });
@@ -129,6 +132,35 @@ export default function sliders() {
           spaceBetween: 85
         }
       }
+    });
+  }
+
+  const productSlider = document.querySelector(".product__slider");
+  if (productSlider) {
+    const buttonsPagination = document.querySelectorAll(".product__pagination-btn");
+    const swiper = new Swiper(productSlider, {
+      speed: 700,
+      modules: [Autoplay, Pagination],
+      slidesPerView: "auto",
+      grabCursor: true,
+      spaceBetween: 15,
+      pagination: {
+        el: ".product__slider-pagination",
+        clickable: true,
+        type: "custom",
+        bulletClass: "product__pagination-btn",
+        bulletActiveClass: "active"
+      },
+      on: {
+        init: () => {
+          const firstBtnPagination = document.querySelector(".product__pagination-btn");
+          firstBtnPagination.classList.add("active");
+        },
+        slideChange: ({ activeIndex }) => {
+          buttonsPagination.forEach((btn) => btn.classList.remove("active"));
+          buttonsPagination[activeIndex].classList.add("active");
+        },
+      },
     });
   }
 }

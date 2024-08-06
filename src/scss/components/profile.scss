@@ -1,15 +1,6 @@
 .profile {
   padding: 140px 0px;
   position: relative;
-  &::before {
-    position: absolute;
-    content: "";
-    left: 20px;
-    right: 20px;
-    bottom: 0;
-    height: 1px;
-    background-color: var(--mine-shaft);
-  }
   @include tablet {
     padding: 90px 0px;
   }

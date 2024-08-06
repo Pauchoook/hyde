@@ -1,11 +1,5 @@
-.top-sales {
+.product-slider {
   padding-bottom: 70px;
-  &__container {
-    padding: 0;
-    @include laptop {
-      padding: 0 20px;
-    }
-  }
   &__header {
     @include flex-between;
     padding: 0 20px;
@@ -14,8 +8,6 @@
     }
   }
   &__slider {
-    max-width: 1500px;
-    margin-left: 0 !important;
     margin-top: 80px;
     @include tablet {
       margin-top: 30px;
@@ -78,10 +70,13 @@
     }
   }
   &__item-price-btn {
-    display: none;
-    max-width: 150px !important;
-    @include tablet {
-      display: block;
+    max-width: 210px;
+    font-size: 22px;
+    padding: 8px;
+    box-sizing: border-box;
+    @include laptop {
+      max-width: 150px !important;
+      font-size: 16px;
     }
   }
 }
