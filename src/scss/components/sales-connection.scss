@@ -1,0 +1,59 @@
+.sales-connection {
+  background: linear-gradient(137deg, #506c85 0%, #95c0cc 100%);
+  border-radius: 42px;
+  color: white;
+  padding: 50px 0px;
+  @include tablet {
+    padding: 80px 0px 120px 0px;
+  }
+  &__container {
+    max-width: 1785px;
+  }
+  &__title {
+    font-size: 56px;
+    line-height: 140%;
+    max-width: 775px;
+    margin-bottom: 45px;
+    @include laptop {
+      font-size: 48px;
+      max-width: 700px;
+    }
+    @include mobile {
+      font-size: 36px;
+    }
+    @include tablet {
+      font-size: 26px;
+    }
+  }
+  &__form {
+    display: flex;
+    max-width: 1240px;
+    width: 100%;
+    @include laptop {
+      flex-wrap: wrap;
+      row-gap: 3px;
+    }
+    @include mobile {
+      max-width: 250px;
+    }
+  }
+  &__label {
+    flex: 1;
+    @include laptop {
+      flex: 0 1 33%;
+    }
+    @include tablet-min {
+      flex-basis: 100%;
+    }
+  }
+  &__input {
+    width: 100%;
+  }
+  &__btn {
+    flex: 0 1 240px;
+    @include tablet-min {
+      flex-basis: 100%;
+      margin: 12px auto 0px auto;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.new-products {
+  padding: 150px 0px 170px 0px;
+  @include laptop-min {
+    padding: 70px 0px;
+  }
+  &__header {
+    @include flex-between;
+  }
+}

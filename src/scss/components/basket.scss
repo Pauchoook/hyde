@@ -1,0 +1,363 @@
+.basket {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1725px;
+  gap: 40px;
+  @include desktop {
+    flex-direction: column-reverse;
+  }
+  &__item-title {
+    font-size: 22px;
+    line-height: 140%;
+    margin-bottom: 40px;
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    position: relative;
+    max-width: 575px;
+    width: 100%;
+    z-index: 1;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @include mobile {
+      &._bg {
+        color: #fff;
+        &::before {
+          position: absolute;
+          content: "";
+          top: -25px;
+          right: -20px;
+          bottom: -25px;
+          left: -20px;
+          border-radius: 40px;
+          background-color: var(--hoki);
+          z-index: -1;
+        }
+        .profile__input {
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+  }
+  &__info-promo {
+    width: 100%;
+  }
+  &__products {
+    max-width: 915px;
+    width: 100%;
+  }
+  &__products-head {
+    @include flex-between;
+  }
+  &__products-clear {
+    font-size: 16px;
+    line-height: 125%;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--hoki);
+    }
+  }
+  &__products-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 40px;
+    @include tablet {
+      row-gap: 20px;
+    }
+  }
+  &__product {
+    display: flex;
+    align-items: center;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 45px;
+      row-gap: 8px;
+    }
+  }
+  &__product-img {
+    width: 165px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-right: 85px;
+    @include laptop-min {
+      margin-right: 30px;
+    }
+    @include tablet {
+      width: 130px;
+      height: 170px;
+      margin-right: 0;
+    }
+  }
+  &__product-info {
+    margin-right: 15px;
+    @include tablet {
+      order: 2;
+    }
+  }
+  &__product-type {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 125%;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__product-title {
+    font-size: 22px;
+    line-height: 140%;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__numbers-price {
+    margin-left: auto;
+    display: flex;
+    gap: 80px;
+    @include tablet {
+      margin-left: 0;
+      gap: 45px;
+    }
+    @media (max-width: 389px) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+  &__mini-title {
+    display: block;
+    font-size: 16px;
+    line-height: 125%;
+    margin-bottom: 12px;
+    opacity: 0.7;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  }
+  &__numbers-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__number-btn {
+    position: relative;
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+    color: var(--mine-shaft);
+    border: 1px solid var(--mine-shaft);
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+    span {
+      position: absolute;
+      width: 11px;
+      color: inherit;
+      background-color: currentColor;
+      height: 1px;
+      &:nth-child(2) {
+        transform: rotate(90deg);
+      }
+    }
+    @include hover {
+      color: var(--hoki);
+      border-color: var(--hoki);
+    }
+  }
+  &__product-number {
+    font-size: 16px;
+    line-height: 125%;
+  }
+  &__product-price {
+    font-size: 36px;
+    line-height: 104%;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+  &__delivery-buttons {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__delivery-item {
+    max-width: 740px;
+    width: 100%;
+  }
+  &__btn-spoller {
+    border-radius: 40px;
+    width: 100%;
+    @include flex-between;
+    padding: 15px 30px;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--mine-shaft);
+    border: 1px solid var(--mine-shaft);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--hoki);
+    }
+    span {
+      opacity: 0.7;
+    }
+    @include tablet {
+      font-size: 14px;
+      padding: 6px 18px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+  &__delivery-input {
+    display: none;
+  }
+  &__btn-spoller-arrow {
+    width: 16px;
+    height: 8px;
+    color: inherit;
+  }
+  &__delivery-addresses {
+    padding-top: 10px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  &__delivery-address {
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 140%;
+    padding: 20px 35px;
+    border-radius: 20px;
+    border: 1px solid var(--mine-shaft);
+    width: 100%;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      color: var(--hoki);
+      border-color: var(--hoki);
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+  &__delivery-date {
+    font-size: 20px;
+    margin: 30px 0px 0px 0px;
+    span {
+      opacity: 0.7;
+    }
+    @include tablet {
+      font-size: 14px;
+      max-width: 190px;
+    }
+  }
+  &__waypay-check {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: url("@img/mark-black.svg") center / 10px 6px no-repeat;
+      }
+    }
+  }
+  &__waypay-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    width: fit-content;
+    gap: 15px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid var(--mine-shaft);
+      left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__waypay-icon {
+    width: 40px;
+    height: 40px;
+    color: inherit;
+    @include tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__all-price {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    @include tablet {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  &__btn-submit {
+    max-width: 415px;
+  }
+  &__input-personal {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: url("@img/mark-black.svg") center / 17px 12px no-repeat;
+      }
+    }
+  }
+  &__label-personal {
+    position: relative;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    max-width: 375px;
+    padding-left: 40px;
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    a {
+      text-decoration: underline;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--mine-shaft);
+    }
+  }
+}

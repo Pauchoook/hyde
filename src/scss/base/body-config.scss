@@ -1,0 +1,11 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper-linear {
+  background: linear-gradient(137deg, #506c85 0%, #95c0cc 100%);
+  border-radius: 42px;
+  @include tablet {
+    background: transparent;
+  }
+}

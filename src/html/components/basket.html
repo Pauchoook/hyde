@@ -1,0 +1,209 @@
+<section class="profile">
+  <div class="container my-orders__container">
+    <h1 class="title title-2">Личный кабинет</h1>
+    <ul class="list profile__nav-list">
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary active">Мой профиль</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мои заказы</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Адреса доставки</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мой баланс</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мой баланс</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Корзина</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Условия доставки и оплаты</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Выйти</a>
+      </li>
+    </ul>
+    <h2 class="title title-3">Оформление заказа</h2>
+    <form class="basket">
+      <div class="basket__info">
+        <div class="basket__item _bg">
+          <h3 class="title basket__item-title">покупатель</h3>
+          <input type="text" name="name" placeholder="Имя и Фамилия" class="input profile__input" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+            class="input profile__input"
+          />
+          <input type="tel" name="tel" placeholder="Телефон" class="input profile__input" />
+          <textarea
+            name="comment"
+            class="input textarea profile__input profile__input--comment"
+            placeholder="Комментарий к заказу"
+          ></textarea>
+          <div class="basket__info-promo">
+            <input type="text" name="promo" placeholder="Промокод" class="input profile__input" />
+            <input
+              type="text"
+              name="sertificate"
+              placeholder="Подарочный сертификат"
+              class="input profile__input"
+            />
+          </div>
+        </div>
+        <div class="basket__item">
+          <h3 class="title basket__item-title">Способ доставки</h3>
+          <div class="basket__delivery-buttons">
+            <button
+              type="button"
+              data-tab="delivery"
+              class="btn tab-btn btn-primary btn-primary--blue active"
+            >
+              Доставка
+            </button>
+            <button type="button" data-tab="pickup" class="btn tab-btn btn-primary btn-primary--blue">
+              Самовывоз
+            </button>
+          </div>
+          <div data-spollers data-tab="delivery" class="tab active basket__delivery-item basket__delivery-spoller">
+            <button data-spoller class="btn basket__btn-spoller">
+              <input type="text" name="delivery-address" class="basket__delivery-input" />
+              <span class="basket__delivery-view">Выберите адрес доставки</span>
+              <svg
+                class="basket__btn-spoller-arrow"
+                viewBox="0 0 18 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L9.25806 9L17 1" stroke="currentColor" stroke-linecap="round" />
+              </svg>
+            </button>
+            <ul class="list basket__delivery-addresses">
+              <li class="basket__delivery-address">
+                Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 12
+              </li>
+              <li class="basket__delivery-address">
+                Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 13
+              </li>
+            </ul>
+          </div>
+          <div data-spollers data-tab="pickup" class="tab basket__delivery-item basket__delivery-spoller">
+            <button data-spoller class="btn basket__btn-spoller">
+              <input type="text" name="delivery-pickup" class="basket__delivery-input" />
+              <span class="basket__delivery-view">Выберите адрес пункта самовывоза</span>
+              <svg
+                class="basket__btn-spoller-arrow"
+                viewBox="0 0 18 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1L9.25806 9L17 1" stroke="currentColor" stroke-linecap="round" />
+              </svg>
+            </button>
+            <ul class="list basket__delivery-addresses">
+              <li class="basket__delivery-address">
+                Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 14
+              </li>
+              <li class="basket__delivery-address">
+                Адрес: 423567, Россия, Санкт-Петербург, ул. Кораблестроителей, 15
+              </li>
+            </ul>
+          </div>
+          <p class="basket__delivery-date"><span>Ожидаемая дата доставки:</span> 15 июля 2024 г.</p>
+        </div>
+        <div class="basket__item">
+          <h3 class="title basket__item-title">Способ оплаты</h3>
+          <input type="radio" name="waypay" id="waypay-card" checked class="basket__waypay-check">
+          <label for="waypay-card" class="basket__waypay-label">
+            <svg class="basket__waypay-icon">
+              <use xlink:href='img/icons/icons.svg#icon-card'></use>
+            </svg>
+            <span>Оплата картой онлайн</span>
+          </label>
+          <input type="radio" name="waypay" id="waypay-cash" class="basket__waypay-check">
+          <label for="waypay-cash" class="basket__waypay-label">
+            <svg class="basket__waypay-icon">
+              <use xlink:href='img/icons/icons.svg#icon-box'></use>
+            </svg>
+            <span>Оплата при получении</span>
+          </label>
+        </div>
+        <div class="basket__item">
+          <div class="basket__all-price">
+            <p class="profile__content">Общая сумма заказа:</p>
+            <span class="title title-3">3 600 ₽</span>
+          </div>
+          <button class="btn btn-primary form-btn basket__btn-submit">Оформить заказ</button>
+          <input type="checkbox" name="delivery-personal" id="delivery-personal" class="basket__input-personal">
+          <label for="delivery-personal" class="basket__label-personal">
+             Согласен с <a href="#">условиями обработки персональных данных</a>, <a href="#">Пользовательского соглашения</a> и <a href="#">Публичной оферты</a>
+          </label>
+        </div>
+      </div>
+      <div class="basket__products">
+        <div class="basket__products-head">
+          <h3 class="title basket__item-title">Корзина</h3>
+          <a href="#" class="basket__products-clear">Очистить</a>
+        </div>
+        <ul class="list basket__products-list">
+          <li class="basket__product">
+            <img src="@img/products/bean.jpg" alt="bean" class="basket__product-img" />
+            <div class="basket__product-info">
+              <span class="basket__product-type">Кофе в зернах</span>
+              <h5 class="title basket__product-title">Hyde Bean Бразилия, 1 кг</h5>
+            </div>
+            <div class="basket__numbers-price">
+              <div class="basket__numbers">
+                <span class="basket__mini-title">шт.</span>
+                <div class="basket__numbers-wrapper">
+                  <button type="button" class="btn basket__number-btn btn-minus">
+                    <span></span>
+                  </button>
+                  <span class="basket__product-number">1</span>
+                  <button type="button" class="btn basket__number-btn btn-plus">
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+              <div class="basket__product-price">
+                <span class="basket__mini-title">Цена</span>
+                <span class="basket__product-price title">1800 ₽</span>
+              </div>
+            </div>
+          </li>
+          <li class="basket__product">
+            <img src="@img/products/bean.jpg" alt="bean" class="basket__product-img" />
+            <div class="basket__product-info">
+              <span class="basket__product-type">Кофе в зернах</span>
+              <h5 class="title basket__product-title">Hyde Bean Бразилия, 1 кг</h5>
+            </div>
+            <div class="basket__numbers-price">
+              <div class="basket__numbers">
+                <span class="basket__mini-title">шт.</span>
+                <div class="basket__numbers-wrapper">
+                  <button type="button" class="btn basket__number-btn btn-minus">
+                    <span></span>
+                  </button>
+                  <span class="basket__product-number">1</span>
+                  <button type="button" class="btn basket__number-btn btn-plus">
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+              <div class="basket__product-price">
+                <span class="basket__mini-title">Цена</span>
+                <span class="basket__product-price title">1800 ₽</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,270 @@
+.product {
+  padding: 150px 0px;
+  @include tablet {
+    padding: 90px 0px 40px 0px;
+  }
+  &__prev {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--mine-shaft);
+    margin-bottom: 40px;
+    opacity: 0.6;
+    transition: opacity .2s ease, color .2s ease;
+    @include hover {
+      color: var(--hoki);
+      opacity: 1;
+    }
+  }
+  &__prev-icon {
+    width: 40px;
+    height: 20px;
+    transform: rotate(180deg);
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1660px;
+    width: 100%;
+    margin: 0 auto;
+    @include desktop {
+      justify-content: start;
+    }
+    @include laptop {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  &__slider-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__slider {
+    width: 535px;
+    height: 575px;
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__slide {
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__slider-pagination {
+    display: flex;
+    gap: 20px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__pagination-btn {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 140px;
+    height: 160px;
+    border: 1px solid transparent;
+    &.active {
+      border-color: var(--half-backed);
+    }
+    @include laptop {
+      width: 100px;
+      height: 120px;
+    }
+    @include tablet {
+      width: 80px;
+      height: 100px;
+      border-radius: 12px;
+    }
+    @include mobile {
+      width: 60px;
+      height: 80px;
+    }
+  }
+  &__pagination-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    max-width: 890px;
+    width: 100%;
+    @include laptop {
+      max-width: 500px;
+    }
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__content {
+    margin: 12px 0px 0px 0px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    text-transform: uppercase;
+    max-width: 695px;
+    opacity: 0.6;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__subcontent {
+    margin: 15px 0px 0px 0px;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.05em;
+    max-width: 610px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__specifications {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  &__specification-item {
+    display: flex;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__specification-name {
+    flex: 0 1 240px;
+    @include tablet {
+      flex-basis: 175px;
+    }
+  }
+  &__specification-value {
+    opacity: 0.7;
+  }
+  &__rec {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 15px;
+      font-size: 14px;
+      .product__specification-name {
+        flex: auto;
+      }
+    }
+  }
+  &__rec-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  &__rec-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    @include tablet {
+      gap: 45px;
+    }
+  }
+  &__rec-icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__bars {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 890px;
+    width: 100%;
+    gap: 30px;
+    margin-top: 30px;
+    @include laptop {
+      justify-content: start;
+    }
+    @include mobile {
+      gap: 0px;
+      row-gap: 15px;
+    }
+  }
+  &__bars-item {
+    flex: 0 1 160px;
+    @include mobile {
+      flex-basis: 50%;
+    }
+  }
+  &__bar {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--gray);
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #000;
+    }
+    @include tablet {
+      width: 80px;
+    }
+  }
+  &__bar-name {
+    display: block;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    margin-top: 4px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    margin-top: 50px;
+    @include tablet {
+      gap: 20px;
+    }
+    @include mobile {
+      margin-top: 35px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+  &__buy {
+    padding: 10px;
+    font-size: 22px;
+    line-height: 140%;
+    max-width: 325px;
+    @include mobile {
+      max-width: none;
+      width: auto;
+      padding: 5px 45px;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.title {
+  font-family: "OpenSansCondensed", sans-serif;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-1 {
+  font-size: 92px;
+  line-height: 104%;
+  @include laptop {
+    font-size: 76px;
+  }
+  @include laptop-min {
+    font-size: 54px;
+  }
+  @include tablet {
+    font-size: 26px;
+  }
+}
+
+.title-2 {
+  font-size: 70px;
+  line-height: 140%;
+  @include laptop-min {
+    font-size: 50px;
+  }
+  @include tablet {
+    font-size: 26px;
+  }
+}
+
+.title-3 {
+  font-size: 36px;
+  line-height: 140%;
+  @include laptop {
+    font-size: 28px;
+  }
+  @include tablet {
+    font-size: 22px;
+  }
+}

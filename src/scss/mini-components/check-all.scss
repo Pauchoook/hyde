@@ -1,0 +1,35 @@
+.check-all {
+  font-family: "OpenSansCondensed", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  @include hover {
+    color: var(--hoki);
+  }
+  @include laptop-min {
+    font-size: 18px;
+    gap: 20px;
+  }
+  @include tablet {
+    width: fit-content;
+    margin: 30px auto 0px auto;
+    font-size: 16px;
+    gap: 10px;
+  }
+  &__arrow {
+    width: 75px;
+    height: 15px;
+    @include laptop-min {
+      width: 45px;
+    }
+    @include tablet {
+      width: 30px;
+    }
+  }
+}

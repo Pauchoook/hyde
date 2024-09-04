@@ -1,0 +1,40 @@
+<div data-popup="auth" class="popup">
+  <div class="popup__overlay"></div>
+  <div class="auth popup__window">
+    <button class="btn popup__close">
+      <svg class="popup__close-icon">
+        <use xlink:href='img/icons/icons.svg#icon-close'></use>
+      </svg>
+    </button>
+    <img src="@img/images/sea.jpg" alt="sea" class="auth__img" />
+    <div class="auth__body">
+      <h1 class="title auth__title">Вход на сайт</h1>
+      <div class="auth__info">
+        <div class="auth__buttons-tab">
+          <button class="btn tab-btn auth__btn-tab active" data-tab="auth-email">
+            По эл. почте
+          </button>
+          <button class="btn tab-btn auth__btn-tab" data-tab="auth-tel">По телефону</button>
+        </div>
+        <div data-tab="auth-email" class="tab active auth__tab">
+          <form action="#" class="auth__form">
+            <input type="email" placeholder="Электронная почта" class="input auth__input" />
+            <input type="password" placeholder="Пароль" class="input auth__input" />
+            <button class="btn btn-primary form-btn auth__btn">Войти</button>
+          </form>
+          <a href="#" target="_blank" class="auth__help">Забыли пароль?</a>
+        </div>
+        <div data-tab="auth-tel" class="tab auth__tab">
+          <form action="#" class="auth__form">
+            <input type="tel" placeholder="Телефон" class="input auth__input" />
+            <button class="btn btn-primary form-btn auth__btn">Выслать код</button>
+          </form>
+          <p class="auth__help">Мы отправим на номер SMS-сообщение с кодом подтверждения</p>
+        </div>
+      </div>
+      <div class="auth__reg">
+        <a href="#" target="_blank" class="auth__reg-btn">Регистрация</a>
+      </div>
+    </div>
+  </div>
+</div>

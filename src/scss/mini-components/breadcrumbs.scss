@@ -1,0 +1,22 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__item {
+    font-size: 20px;
+    a, svg {
+      opacity: 0.6;
+    }
+    a {
+      transition: opacity .2s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__icon {
+    display: block;
+    width: 40px;
+    height: 15px;
+  }
+}

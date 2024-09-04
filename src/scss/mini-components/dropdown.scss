@@ -1,0 +1,33 @@
+.dropdown {
+  position: relative;
+  &.open {
+    .dropdown__item {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__item {
+    position: absolute;
+    right: -20px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform .5s ease, opacity .5s ease, visibility .5s ease;
+    z-index: 10;
+  }
+  &__body {
+    border: 1px solid var(--mine-shaft);
+    margin-top: 12px;
+    width: 390px;
+    max-height: 555px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 42px;
+    padding: 40px 20px;
+    @include mobile {
+      padding: 15px;
+      width: 300px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "./fonts/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/title";
+@import "./ui/form";
+@import "./ui/tab";
+
+// mini-components
+@import "./mini-components/check-all";
+@import "./mini-components/rating";
+@import "./mini-components/btn-slider";
+@import "./mini-components/popup";
+@import "./mini-components/breadcrumbs";
+@import "./mini-components/dropdown";
+@import "./mini-components/notification";
+@import "./mini-components/product-slider";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+@import "./components/advantages";
+@import "./components/top-sales";
+@import "./components/our-products";
+@import "./components/discount";
+@import "./components/new-products";
+@import "./components/reviews";
+@import "./components/stories";
+@import "./components/shop";
+@import "./components/auth";
+@import "./components/password";
+@import "./components/delivery-pay";
+@import "./components/history";
+@import "./components/history-article";
+@import "./components/profile";
+@import "./components/my-orders";
+@import "./components/my-balance";
+@import "./components/address";
+@import "./components/basket";
+@import "./components/product";
+@import "./components/rec-products";
+@import "./components/supplies";
+@import "./components/supplies-sales";
+@import "./components/sales-connection";
+
+@import "./components/footer";

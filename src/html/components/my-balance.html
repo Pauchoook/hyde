@@ -1,0 +1,76 @@
+<section class="profile">
+  <div class="container my-orders__container">
+    <h1 class="title title-2">Личный кабинет</h1>
+    <ul class="list profile__nav-list">
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary active">Мой профиль</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мои заказы</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Адреса доставки</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мой баланс</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Мой баланс</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Корзина</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Условия доставки и оплаты</a>
+      </li>
+      <li>
+        <a href="#" class="profile__nav-btn btn-primary">Выйти</a>
+      </li>
+      <li></li>
+    </ul>
+    <div class="my-balance__start-window">
+      <div class="my-balance__balance">
+        <p class="profile__content">Ваш баланс</p>
+        <span class="title my-balance__num-balance">1800 ₽</span>
+      </div>
+      <button class="btn btn-primary my-balance__btn-start">Пополнить</button>
+    </div>
+    <div class="my-balance__replenish">
+      <h2 class="title title-3 my-balance__replenish-title">Пополнение баланса</h2>
+      <div class="my-balance__replenish-nav">
+        <button
+          data-tab="card"
+          class="my-balance__replenish-btn btn btn-primary btn-primary--blue tab-btn active"
+        >
+          С карты
+        </button>
+        <button
+          data-tab="sertificate"
+          class="my-balance__replenish-btn btn btn-primary btn-primary--blue tab-btn"
+        >
+          Подарочный сертификат
+        </button>
+      </div>
+      <div data-tab="card" class="tab active">
+        <form action="#" class="my-balance__form">
+          <input type="number" name="sum" placeholder="Сумма" class="input my-balance__form-input" />
+          <button class="btn btn-primary form-btn my-balance__form-btn">Оплатить</button>
+          <input type="checkbox" name="check" id="check" class="my-balance__check" />
+          <label for="check" class="my-balance__check-label"
+            > Согласен с <a href="#" target="_blank">условиями обработки персональных данных</a>, <a
+              href="#"
+              target="_blank"
+              >Пользовательского соглашения</a
+            > и <a href="#" target="_blank"> Публичной оферты</a></label
+          >
+        </form>
+      </div>
+      <div data-tab="sertificate" class="tab">
+        <form action="#" class="open my-balance__form">
+          <input type="text" name="sertificate" placeholder="Подарочный сертификат" class="input my-balance__form-input" />
+          <button class="btn btn-primary form-btn my-balance__form-btn">Зачислить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

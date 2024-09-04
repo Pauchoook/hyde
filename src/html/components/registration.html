@@ -1,0 +1,50 @@
+<section class="password">
+  <img src="@img/images/reg-bg.jpg" alt="bg" class="password__bg">
+  <div class="container">
+    <h1 class="title title-2">Регистрация</h1>
+    <p class="password__content">
+      Введите адрес электронной почты, и мы отправим на него ссылку для восстановления пароля.
+    </p>
+    <form action="#" class="password__form">
+      <h5 class="password__form-title">Основные данные</h5>
+      <div class="password__form-item">
+        <input type="text" name="name" placeholder="Имя и Фамилия" class="input password__input" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Электронная почта"
+          class="input password__input"
+        />
+        <input type="tel" name="tel" placeholder="Телефон" class="input password__input" />
+      </div>
+      <div class="password__form-item">
+        <h5 class="password__form-title">Ваш пароль</h5>
+        <input
+          type="password"
+          name="password-new"
+          placeholder="Новый пароль"
+          class="input password__input"
+        />
+        <input
+          type="password"
+          name="password-replay"
+          placeholder="Повторите пароль"
+          class="input password__input"
+        />
+      </div>
+      <input
+        type="checkbox"
+        name="personal-data"
+        class="password__input-check"
+        id="personal-data"
+      />
+      <label for="personal-data" class="password__personal-data-btn">
+        Согласен с <a href="#">условиями обработки персональных данных</a>, <a
+          href="#"
+        >Пользовательского соглашения</a
+        > и <a href="#">Публичной оферты</a>
+      </label>
+      <button class="btn btn-primary password__btn form-btn">Продолжить</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,275 @@
+.footer {
+  position: relative;
+  padding: 75px 0px 45px 0px;
+  z-index: 1;
+  &--line {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 20px;
+      right: 20px;
+      height: 1px;
+      background: rgb(44, 44, 44, 0.2);
+    }
+  }
+  @include tablet {
+    padding: 30px 0px 20px 0px;
+  }
+  &__foots {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    transform: translateX(-300px);
+    width: 615px;
+    @include desktop {
+      display: none;
+    }
+  }
+  &__container {
+    @include flex-between;
+    @include tablet-min {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 310px;
+    @include laptop {
+      width: 260px;
+    }
+    @include laptop-min {
+      width: 180px;
+    }
+    @include tablet {
+      width: 108px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+  &__view {
+    font-size: 36px;
+    line-height: 104%;
+    @include laptop {
+      font-size: 24px;
+    }
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__contacts-info {
+    margin-top: 135px;
+    @include tablet-min {
+      margin-top: 30px;
+    }
+  }
+  &__contacts-title {
+    margin: 0px 0px 30px 0px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 91%;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__contacts-item {
+    font-size: 20px;
+    opacity: 0.7;
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+    @include hover {
+      opacity: 1;
+      color: var(--hoki);
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__networks {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include tablet {
+      gap: 15px;
+    }
+    @include tablet-min {
+      margin-top: 15px;
+    }
+  }
+  &__networks-el {
+    display: block;
+    width: 45px;
+    height: 45px;
+    color: var(--wheat);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--hoki);
+    }
+    @include laptop-min {
+      width: 40px;
+      height: 40px;
+    }
+    @include tablet {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  &__networks-icon {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+  &__nav {
+    display: flex;
+    gap: 165px;
+    @media (max-width: 1710px) {
+      gap: 100px;
+    }
+    @include laptop-min {
+      gap: 15px;
+    }
+    @include tablet-min {
+      margin-top: 30px;
+      gap: 30px;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    li {
+      margin-bottom: 15px;
+    }
+    @include tablet {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__nav-title {
+    font-size: 22px;
+    line-height: 91%;
+    margin-bottom: 30px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+  &__nav-el {
+    position: relative;
+    font-size: 20px;
+    line-height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      color: inherit;
+      height: 1px;
+      opacity: 0.7;
+      background-color: currentColor;
+      transition: right 0.2s ease;
+    }
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__sub {
+    position: relative;
+    margin-top: 120px;
+    max-width: 815px;
+    padding-top: 20px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.2;
+      height: 1px;
+      background-color: var(--mine-shaft);
+    }
+    @media (max-width: 1835px) {
+      max-width: 700px;
+    }
+    @include tablet {
+      margin-top: 30px;
+      &::before {
+        right: -20px;
+        left: -20px;
+      }
+    }
+  }
+  &__sub-list {
+    @include flex-between;
+    @include tablet {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+  &__sub-item {
+    font-size: 12px;
+    letter-spacing: -0.05em;
+    opacity: 0.7;
+    a {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        height: 1px;
+        opacity: 0.7;
+        color: inherit;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+}

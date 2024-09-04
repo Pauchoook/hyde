@@ -1,0 +1,55 @@
+.delivery-pay {
+  position: relative;
+  margin-top: 95px;
+  padding: 80px 0px;
+  background: rgba(95, 124, 156, 0.5);
+  border-radius: 42px;
+  @include tablet {
+    background: transparent;
+    margin-top: 75px;
+    padding: 40px 0px 20px 0px;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      height: 1px;
+      background-color: var(--mine-shaft);
+    }
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__item {
+    max-width: 740px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+  &__block-title {
+    font-size: 36px;
+    line-height: 140%;
+    margin-bottom: 20px;
+    @include laptop {
+      font-size: 32px;
+    }
+    @include laptop-min {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 20px;
+    line-height: 140%;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}

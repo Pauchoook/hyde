@@ -1,0 +1,10 @@
+.top-sales {
+  padding-bottom: 70px;
+  &__header {
+    @include flex-between;
+    padding: 0 20px;
+    @include laptop {
+      padding: 0;
+    }
+  }
+}

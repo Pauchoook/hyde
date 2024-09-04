@@ -1,0 +1,320 @@
+.shop {
+  position: relative;
+  padding: 140px 0px 70px 0px;
+  @include tablet {
+    padding-top: 95px;
+  }
+  &__el {
+    position: absolute;
+    left: 0;
+    bottom: 280px;
+    @include desktop {
+      bottom: 100px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__category {
+    @include flex-between;
+    overflow-x: auto;
+    gap: 10px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  &__category-item {
+    flex: 0 0 250px;
+    min-height: 160px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  &__category-el {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 160px;
+    color: #fff;
+  }
+  &__category-title {
+    position: absolute;
+    font-size: 22px;
+    line-height: 140%;
+    left: 20px;
+    bottom: 20px;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include tablet {
+      left: 10px;
+      bottom: 10px;
+      font-size: 12px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    gap: 40px;
+    @include laptop {
+      flex-direction: column;
+    }
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+  &__btn-sidebar {
+    display: none;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    gap: 6px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--hoki);
+    }
+    @include tablet-min {
+      display: flex;
+    }
+  }
+  &__btn-sidebar-icon {
+    width: 20px;
+    height: 20px;
+    color: inherit;
+  }
+  &__sidebar-overlay {
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.5s ease,
+      visibility 0.5s ease;
+      z-index: 100;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--elephant);
+    @include laptop {
+      flex-direction: row;
+    }
+    @include tablet-min {
+      position: fixed;
+      background-color: #fff;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      max-width: 270px;
+      width: 100%;
+      padding-top: 55px;
+      padding: 55px 20px;
+      overflow-y: auto;
+      transform: translateX(-270px);
+      transition: transform 0.5s ease;
+      z-index: 150;
+      &.open {
+        transform: translateX(0);
+      }
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+  &__sidebar-close {
+    position: relative;
+    @include flex-center;
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px 0px auto;
+    span {
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+    @include tablet-min {
+      display: flex;
+    }
+  }
+  &__sidebar-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 155%;
+    letter-spacing: 0.03em;
+    margin: 0px 0px 10px 0px;
+  }
+  &__sidebar-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  &__sidebar-form-item {
+  }
+  &__sidebar-label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 3px solid var(--elephant);
+      background-color: transparent;
+      left: 0;
+    }
+  }
+  &__sidebar-input {
+    display: none;
+    &:checked + label {
+      &::before {
+        background-color: var(--elephant);
+      }
+    }
+  }
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 75px;
+    max-width: 1395px;
+    @include tablet-min {
+      justify-content: center;
+      gap: 10px;
+      row-gap: 30px;
+    }
+  }
+  &__product {
+    display: block;
+    flex: 0 1 415px;
+    @include desktop {
+      flex-basis: 350px;
+    }
+    @include laptop {
+      flex-basis: calc(33% - 10px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 15px);
+    }
+    @include tablet-min {
+      flex-basis: 245px;
+    }
+  }
+  &__product-img {
+    width: 100%;
+    height: 530px;
+    border-radius: 20px;
+    object-fit: cover;
+    @include desktop {
+      height: 350px;
+    }
+    @include tablet-min {
+      height: 275px;
+    }
+  }
+  &__produc-type {
+    display: block;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    margin-top: 20px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__product-title {
+    font-size: 22px;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-top: 5px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__product-price-info {
+    @include flex-between;
+    margin-top: 8px;
+  }
+  &__product-price {
+    display: block;
+    font-size: 20px;
+    line-height: 140%;
+    @include mobile {
+      font-family: "OpenSansCondensed", sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 140%;
+      text-transform: uppercase;
+    }
+  }
+  &__btn-price-btn {
+    display: none;
+    max-width: 150px !important;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__nav {
+    @include flex-center;
+    margin-top: 30px;
+    gap: 12px;
+  }
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &__nav-item {
+    font-size: 16px;
+    line-height: 140%;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+    &.active {
+      opacity: 1;
+    }
+    @include hover {
+      opacity: 1;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__nav-btn {
+    width: 80px;
+    height: 15px;
+    transition: color 0.2s ease;
+    &--prev {
+      transform: rotate(180deg);
+    }
+    @include hover {
+      color: var(--hoki);
+    }
+    @include mobile {
+      width: 50px;
+    }
+  }
+  &__nav-btn-arrow {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+}
