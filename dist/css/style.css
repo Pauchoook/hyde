@@ -2494,11 +2494,31 @@ body {
   margin-bottom: 60px
 }
 .supplies {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 190px 0 90px 0;
+  margin-top: 180px;
+  z-index: 1
+}
+.supplies::before {
+  position: absolute;
+  content: "";
+  top: 140px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(137deg,#506c85 0,#95c0cc 100%);
   border-radius: 42px;
-  color: #fff;
-  padding: 50px 0 90px 0;
-  margin-top: 180px
+  z-index: -2
+}
+.supplies__decor {
+  position: absolute;
+  width: 730px;
+  height: auto;
+  top: 0;
+  right: -60px;
+  z-index: -1
 }
 .supplies__container {
   max-width: 1785px
@@ -2577,10 +2597,23 @@ body {
   width: 100%
 }
 .sales-connection {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(137deg,#506c85 0,#95c0cc 100%);
   border-radius: 42px;
   color: #fff;
-  padding: 50px 0
+  padding: 50px 0;
+  z-index: 1
+}
+.sales-connection__decor {
+  position: absolute;
+  width: 580px;
+  height: auto;
+  top: -90px;
+  right: 0;
+  -webkit-transform: rotate(-24deg);
+  transform: rotate(-24deg);
+  z-index: -1
 }
 .sales-connection__container {
   max-width: 1785px
@@ -3079,6 +3112,9 @@ body {
   .product__body {
     justify-content: start
   }
+  .sales-connection__decor {
+    width: 505px
+  }
   .footer__foots {
     display: none
   }
@@ -3309,6 +3345,9 @@ body {
   .rec-products__title {
     padding: 0
   }
+  .supplies__decor {
+    width: 590px
+  }
   .supplies__btn {
     font-size: 22px;
     gap: 30px;
@@ -3326,6 +3365,10 @@ body {
   .supplies-sales__btn {
     font-size: 22px;
     max-width: 400px
+  }
+  .sales-connection__decor {
+    width: 300px;
+    top: -95px
   }
   .sales-connection__title {
     font-size: 48px;
@@ -3356,6 +3399,17 @@ body {
   .history__item {
     flex: auto;
     min-height: auto
+  }
+}
+@media (max-width:1099px) {
+  .supplies {
+    padding-top: 50px
+  }
+  .supplies::before {
+    top: 0
+  }
+  .supplies__decor {
+    width: 400px
   }
 }
 @media (max-width:992px) {
@@ -3526,8 +3580,18 @@ body {
   .product__info {
     max-width: none
   }
+  .supplies__decor {
+    width: 280px;
+    bottom: -80px;
+    top: auto
+  }
   .supplies-sales__slide {
     height: 280px!important
+  }
+  .sales-connection__decor {
+    top: auto;
+    bottom: -230px;
+    right: -70px
   }
   .footer__logo {
     width: 180px
@@ -4084,11 +4148,14 @@ body {
     padding-bottom: 50px;
     margin-top: 70px
   }
+  .supplies__decor {
+    right: -75px;
+    bottom: -200px
+  }
   .supplies__btn {
     font-size: 18px;
     max-width: 300px;
-    padding: 10px;
-    margin-top: 180px
+    padding: 10px
   }
   .supplies__btn-arrow {
     width: 50px
@@ -4124,6 +4191,9 @@ body {
   }
   .sales-connection {
     padding: 80px 0 120px 0
+  }
+  .sales-connection__decor {
+    bottom: -180px
   }
   .sales-connection__title {
     font-size: 26px
@@ -4272,11 +4342,21 @@ body {
   .history-article__slide-content {
     font-size: 12px
   }
+  .sales-connection__decor {
+    opacity: .8;
+    bottom: auto;
+    top: 235px;
+    right: -120px;
+    -webkit-transform: rotate(-14deg);
+    transform: rotate(-14deg)
+  }
   .sales-connection__label {
     flex-basis: 100%
   }
   .sales-connection__btn {
-    flex-basis: 100%;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
     margin: 12px auto 0 auto
   }
   .footer__container {
@@ -4499,11 +4579,15 @@ body {
     padding: 5px 45px;
     font-size: 18px
   }
+  .supplies__decor {
+    bottom: -80px
+  }
   .supplies__subtitle {
     font-size: 16px;
     max-width: 240px
   }
   .supplies__btn {
+    margin-top: 180px;
     font-size: 16px;
     max-width: 225px
   }
