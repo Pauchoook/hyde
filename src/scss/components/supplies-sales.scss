@@ -68,21 +68,29 @@
     gap: 12px;
   }
   &__list-item {
+    position: relative;
     display: flex;
-    gap: 10px;
-    span {
-      max-width: calc(100% - 36px);
+    padding-left: 34px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      left: 0;
+      background: url("@img/check.svg") 0 0 / 100% 100% no-repeat;
+      transform: translateY(3px);
+      z-index: -1;
     }
-    @include mobile-min {
-      max-width: 270px;
-    }
-  }
-  &__item-icon {
-    width: 26px;
-    height: 26px;
-    transform: translateY(3px);
     @include tablet {
-      transform: translateY(0px);
+      padding-left: 30px;
+      &::before {
+        width: 20px;
+        height: 20px;
+        transform: translateY(0px);
+      }
+    }
+    @include mobile {
+      max-width: 275px;
     }
   }
   &__btn {
@@ -99,7 +107,7 @@
       font-size: 18px;
       max-width: 300px;
       padding: 10px;
-      margin: 0 auto; 
+      margin: 0 auto;
     }
     @include mobile {
       font-size: 16px;

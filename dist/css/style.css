@@ -2577,17 +2577,20 @@ body {
   gap: 12px
 }
 .supplies-sales__list-item {
+  position: relative;
   display: flex;
-  gap: 10px
+  padding-left: 34px
 }
-.supplies-sales__list-item span {
-  max-width: calc(100% - 36px)
-}
-.supplies-sales__item-icon {
-  width: 26px;
-  height: 26px;
+.supplies-sales__list-item::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  left: 0;
+  background: url(../img/check.svg) 0 0/100% 100% no-repeat;
   -webkit-transform: translateY(3px);
-  transform: translateY(3px)
+  transform: translateY(3px);
+  z-index: -1
 }
 .supplies-sales__btn {
   display: block;
@@ -4179,7 +4182,12 @@ body {
   .supplies-sales__content {
     font-size: 18px
   }
-  .supplies-sales__item-icon {
+  .supplies-sales__list-item {
+    padding-left: 30px
+  }
+  .supplies-sales__list-item::before {
+    width: 20px;
+    height: 20px;
     -webkit-transform: translateY(0);
     transform: translateY(0)
   }
@@ -4594,6 +4602,9 @@ body {
   .supplies-sales__content {
     font-size: 14px
   }
+  .supplies-sales__list-item {
+    max-width: 275px
+  }
   .supplies-sales__btn {
     font-size: 16px;
     max-width: 270px
@@ -4606,11 +4617,6 @@ body {
   }
   .footer__nav {
     flex-direction: column
-  }
-}
-@media (max-width:419px) {
-  .supplies-sales__list-item {
-    max-width: 270px
   }
 }
 @media (max-width:389px) {
