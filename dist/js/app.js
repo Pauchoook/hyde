@@ -4322,8 +4322,15 @@
                 }
             });
         }
-        const productSlider = document.querySelector(".product__slider");
-        if (productSlider) {
+        const paginationProductSlider = document.querySelector(".product__slider-pagination");
+        if (paginationProductSlider) {
+            const swiperPag = new Swiper(paginationProductSlider, {
+                speed: 700,
+                grabCursor: true,
+                slidesPerView: 4,
+                spaceBetween: 20
+            });
+            const productSlider = document.querySelector(".product__slider");
             const buttonsPagination = document.querySelectorAll(".product__pagination-btn");
             new Swiper(productSlider, {
                 speed: 700,
@@ -4345,6 +4352,7 @@
                     slideChange: ({activeIndex}) => {
                         buttonsPagination.forEach((btn => btn.classList.remove("active")));
                         buttonsPagination[activeIndex].classList.add("active");
+                        swiperPag.slideTo(activeIndex);
                     }
                 }
             });
